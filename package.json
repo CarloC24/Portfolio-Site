@@ -1,0 +1,33 @@
+{
+  "name": "Portfolio-Site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "start": "next start -p 8000",
+    "build": "next build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarloC24/Portfolio-Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarloC24/Portfolio-Site/issues"
+  },
+  "homepage": "https://github.com/CarloC24/Portfolio-Site#readme",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "babel-core": "^6.26.3",
+    "babel-plugin-styled-components": "^1.10.0",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
+  }
+}
