@@ -1,8 +1,18 @@
-import App, { Container } from 'next/app';
-import Head from 'next/head';
-import Router from 'next/router';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import GlobalStyle from '../assets/globalStyle';
+import App, { Container } from "next/app";
+import Head from "next/head";
+import Router from "next/router";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import GlobalStyle from "../assets/globalStyle";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+const theme = {
+  red: "#FF0000",
+  black: "#393939",
+  grey: "#3A3A3A",
+  lightgrey: "#E1E1E1",
+  offWhite: "#EDEDED",
+  maxWidth: "1000px",
+  bs: "0 12px 24px 0 rgba(0,0,0,0.09)"
+};
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -14,6 +24,7 @@ class MyApp extends App {
     pageProps.query = ctx.query;
     return { pageProps };
   }
+
   renderHead() {
     return (
       <Head>
@@ -34,7 +45,9 @@ class MyApp extends App {
         {this.renderHead()}
         <GlobalStyle />
         <CssBaseline />
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </Container>
     );
   }
