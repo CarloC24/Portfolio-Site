@@ -1,9 +1,9 @@
 import App, { Container } from "next/app";
 import Head from "next/head";
 import Router from "next/router";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import GlobalStyle from "../assets/globalStyle";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
 const theme = {
   red: "#FF0000",
   black: "#393939",
@@ -44,7 +44,6 @@ class MyApp extends App {
       <Container>
         {this.renderHead()}
         <GlobalStyle />
-        <CssBaseline />
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>

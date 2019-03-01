@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import Navbar from "../Components/Navbar";
 
 export class HomePage extends Component {
   render() {
-    const { classes } = this.props;
     return (
       <div>
-        <p>this is my portfolio site</p>
+        <Navbar>
+          <p>this is my portfolio site</p>
+        </Navbar>
       </div>
     );
   }
