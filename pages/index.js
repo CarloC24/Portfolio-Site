@@ -5,9 +5,8 @@ export class HomePage extends Component {
   render() {
     return (
       <div>
-        <Navbar>
-          <p>this is my portfolio site</p>
-        </Navbar>
+        <Navbar />
+        <p>Whut</p>
       </div>
     );
   }

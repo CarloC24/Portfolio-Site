@@ -4,11 +4,15 @@ import { Button } from "reactstrap";
 
 const Appbar = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   p {
-    font-size: 1ß0px;
+    font-size: 10px;
     font-family: "Roboto";
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
@@ -16,9 +20,17 @@ export class Navbar extends Component {
   render() {
     return (
       <Appbar>
-        <p>Icon goes here</p>
-        <Button color="danger">Danger!</Button>
-        {this.props.children}
+        <p>Icon </p>
+        <nav>
+          <a>Home</a>
+          <a>Work</a>
+          <a>Contact</a>
+        </nav>
+        <div className="contact">
+          <p>Twitter</p>
+          <p>Github</p>
+          <p>Instagram</p>
+        </div>
       </Appbar>
     );
   }
