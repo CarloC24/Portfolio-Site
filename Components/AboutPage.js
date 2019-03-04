@@ -4,7 +4,7 @@ export class AboutPage extends Component {
   render() {
     return (
       <div>
-        <p>This is the about page</p>
+        <p>This is the about page for me</p>
       </div>
     );
   }
