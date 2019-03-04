@@ -4,7 +4,7 @@ import { Button } from "reactstrap";
 
 const Appbar = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 2fr;
   grid-gap: 20px;
   p {
     font-size: 10px;
