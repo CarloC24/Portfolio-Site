@@ -40,7 +40,6 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    console.log(pageProps, Component);
     return (
       <Container>
         {this.renderHead()}

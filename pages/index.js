@@ -6,7 +6,6 @@ export class HomePage extends Component {
     return (
       <div>
         <Navbar />
-        <p>Whut</p>
       </div>
     );
   }
