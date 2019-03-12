@@ -7,12 +7,10 @@ const Appbar = styled.div`
   grid-template-columns: 1fr 1fr 2fr;
   grid-gap: 20px;
   p {
-    font-size: 10px;
-    font-family: "Roboto";
+    font-size: 30px;
+    font-family: "radnika_next";
   }
   .contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
