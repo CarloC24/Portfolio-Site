@@ -1,6 +1,7 @@
 import App, { Container } from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import Page from "../Components/Page";
 import GlobalStyle from "../assets/globalStyle";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -39,13 +40,15 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-
+    console.log(pageProps, Component);
     return (
       <Container>
         {this.renderHead()}
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+          <Page>
+            <Component {...pageProps} />
+          </Page>
         </ThemeProvider>
       </Container>
     );
