@@ -10,12 +10,12 @@ const Appbar = styled.div`
   .namecontainer {
     width: 30%;
     height: 100px;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    border-top: 5px solid ${props => props.theme.offWhite};
+    border-bottom: 5px solid ${props => props.theme.offWhite};
     display: grid;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: ${props => props.theme.offWhite};
     h1 {
       font-family: "radnika_next";
       font-weight: 500;
@@ -34,10 +34,11 @@ const Appbar = styled.div`
       p {
         font-size: 20px;
         font-family: "Roboto";
-        color: white;
+        color: ${props => props.theme.offWhite};
       }
       .dropdownicon {
         text-align: center;
+        color: ${props => props.theme.offWhite};
       }
     }
   }
@@ -47,18 +48,16 @@ export class Navbar extends Component {
   state = {
     dropdownOpen: false
   };
+  handleOpenCloseDropdown = () => {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen });
+  };
   render() {
     return (
       <Appbar>
         <div className="dropdowncontainer">
-          <div className="dropdown">
+          <div className="dropdown" onClick={this.handleOpenCloseDropdown}>
             <p>Menu</p>
             <p className="dropdownicon">&equiv;</p>
-            {this.state.dropdownOpen && (
-              <div>
-                <p>Im open</p>
-              </div>
-            )}
           </div>
         </div>
         <div className="namecontainer">
