@@ -10,38 +10,56 @@ const Appbar = styled.div`
   .namecontainer {
     width: 30%;
     height: 100px;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
     display: grid;
     justify-content: center;
     align-items: center;
+    color: white;
     h1 {
       font-family: "radnika_next";
       font-weight: 500;
       font-size: 30px;
     }
   }
-  .dropdown {
+  .dropdowncontainer {
     display: grid;
-    align-items: end;
+    align-items: center;
     width: 100%;
+    height: 70px;
     justify-items: end;
-    background: #333;
-    opacity: 0.8;
-    .dropdownicon {
-      color: white;
+    .dropdown {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      p {
+        font-size: 20px;
+        font-family: "Roboto";
+        color: white;
+      }
+      .dropdownicon {
+        text-align: center;
+      }
     }
   }
 `;
 
 export class Navbar extends Component {
+  state = {
+    dropdownOpen: false
+  };
   render() {
     return (
       <Appbar>
         <div className="dropdowncontainer">
-          <div className="dropdown" />
-          <p className="dropdownicon">&equiv;</p>
-          <p>Menu</p>
+          <div className="dropdown">
+            <p>Menu</p>
+            <p className="dropdownicon">&equiv;</p>
+            {this.state.dropdownOpen && (
+              <div>
+                <p>Im open</p>
+              </div>
+            )}
+          </div>
         </div>
         <div className="namecontainer">
           <h1> Welcome</h1>
