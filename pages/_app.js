@@ -25,6 +25,12 @@ class MyApp extends App {
     pageProps.query = ctx.query;
     return { pageProps };
   }
+  state = {
+    dropdown: false
+  };
+  handleOpenCloseDropdown = () => {
+    this.setState({ dropdown: !this.state.dropdown });
+  };
 
   renderHead() {
     return (

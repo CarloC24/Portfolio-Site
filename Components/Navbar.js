@@ -30,7 +30,11 @@ const Appbar = styled.div`
     justify-items: end;
     .dropdown {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      width: 25%;
+      grid-gap: 20px;
+      justify-content: space-around;
+      position: absolute;
+      grid-template-columns: repeat(3, 1fr);
       p {
         font-size: 20px;
         font-family: "Roboto";
@@ -45,19 +49,14 @@ const Appbar = styled.div`
 `;
 
 export class Navbar extends Component {
-  state = {
-    dropdownOpen: false
-  };
-  handleOpenCloseDropdown = () => {
-    this.setState({ dropdownOpen: !this.state.dropdownOpen });
-  };
   render() {
     return (
       <Appbar>
         <div className="dropdowncontainer">
-          <div className="dropdown" onClick={this.handleOpenCloseDropdown}>
-            <p>Menu</p>
-            <p className="dropdownicon">&equiv;</p>
+          <div className="dropdown">
+            <p>About</p>
+            <p>Works</p>
+            <p>Contact</p>
           </div>
         </div>
         <div className="namecontainer">
