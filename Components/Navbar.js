@@ -7,19 +7,23 @@ const Appbar = styled.div`
   grid-gap: 20px;
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
+  margin: 20px 0;
   .namecontainer {
-    width: 30%;
-    height: 100px;
+    width: 40%;
+    height: 120px;
     border-top: 5px solid ${props => props.theme.offWhite};
     border-bottom: 5px solid ${props => props.theme.offWhite};
     display: grid;
     justify-content: center;
     align-items: center;
     color: ${props => props.theme.offWhite};
-    h1 {
-      font-family: "radnika_next";
-      font-weight: 500;
-      font-size: 30px;
+    div {
+      margin: 20px auto;
+      h1 {
+        font-family: "radnika_next";
+        font-weight: 500;
+        font-size: 30px;
+      }
     }
   }
   .dropdowncontainer {
@@ -35,10 +39,13 @@ const Appbar = styled.div`
       justify-content: space-around;
       position: absolute;
       grid-template-columns: repeat(3, 1fr);
-      p {
+      a {
         font-size: 20px;
         font-family: "Roboto";
         color: ${props => props.theme.offWhite};
+      }
+      a:active {
+        border-bottom: 2px solid black;
       }
       .dropdownicon {
         text-align: center;
@@ -54,13 +61,15 @@ export class Navbar extends Component {
       <Appbar>
         <div className="dropdowncontainer">
           <div className="dropdown">
-            <p>About</p>
-            <p>Works</p>
-            <p>Contact</p>
+            <a>About</a>
+            <a>Works</a>
+            <a>Contact</a>
           </div>
         </div>
         <div className="namecontainer">
-          <h1> Welcome</h1>
+          <div>
+            <h1>My Portfolio Site</h1>
+          </div>
         </div>
       </Appbar>
     );

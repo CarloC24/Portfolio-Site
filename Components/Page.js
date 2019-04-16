@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const GlobalImage = styled.div`
-  background-image: url("../static/2.jpg");
+  background-image: url("../static/3.jpg");
   position: absolute;
   width: 100%;
   height: 100%;
