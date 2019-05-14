@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Button } from "reactstrap";
 
 const Appbar = styled.div`
   display: grid;
