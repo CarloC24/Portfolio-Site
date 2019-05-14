@@ -4,7 +4,6 @@ import Router from "next/router";
 import Page from "../Components/Page";
 import GlobalStyle from "../assets/globalStyle";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import "bootstrap/dist/css/bootstrap.min.css";
 const theme = {
   red: "#FF0000",
   black: "#393939",
