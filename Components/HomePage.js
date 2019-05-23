@@ -11,6 +11,8 @@ const HomeContainer = styled.div`
 const WorksContainer = styled.div`
   height: 800px;
   background: ${props => props.theme.black};
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 `;
 
 export class HomePage extends Component {

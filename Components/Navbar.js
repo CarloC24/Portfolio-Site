@@ -67,7 +67,7 @@ export class Navbar extends Component {
         </div>
         <div className="namecontainer">
           <div>
-            <h1>My Portfolio Site</h1>
+            <h1>Juan Carlo Clamucha</h1>
           </div>
         </div>
       </Appbar>
