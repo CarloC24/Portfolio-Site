@@ -60,9 +60,10 @@ export class Navbar extends Component {
       <Appbar>
         <div className="dropdowncontainer">
           <div className="dropdown">
-            <a>About</a>
-            <a>Works</a>
-            <a>Contact</a>
+            <a href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/">
+              LinkedIn
+            </a>
+            <a href="https://github.com/CarloC24">Github</a>
           </div>
         </div>
         <div className="namecontainer">
