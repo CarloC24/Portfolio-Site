@@ -54,19 +54,23 @@ import styled from "styled-components";
 // `;
 const Appbar = styled.div`
   display: grid;
+  grid-gap: 20px;
   justify-items: center;
+  height: 300px;
   .namecontainer {
     border-bottom: 5px solid ${props => props.theme.offWhite};
     text-align: center;
     font-family: "radnika_next";
     font-size: 20px;
     width: 40%;
+    display: grid;
+    align-items: end;
     h1 {
       color: ${props => props.theme.offWhite};
     }
   }
   .link-container {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 25px;
     color: ${props => props.theme.offWhite};
     a {
