@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { redux_logo } from "../assets/logos";
 
 const HomeContainer = styled.div`
   background: ${props => props.theme.offWhite};
@@ -17,6 +18,13 @@ const HomeContainer = styled.div`
     }
   }
   .home_paragraph__container {
+    display: grid;
+    .logos {
+      width: 10%;
+      svg {
+        width: 100%;
+      }
+    }
   }
 `;
 
@@ -42,19 +50,17 @@ export class HomePage extends Component {
             />
           </div>
           <div className="home_paragraph__container">
-            <div>
+            <div className="logos">{redux_logo()}</div>
+            <div className="logos">
               <p>Box 1</p>
             </div>
-            <div>
+            <div className="logos">
               <p>Box 1</p>
             </div>
-            <div>
+            <div className="logos">
               <p>Box 1</p>
             </div>
-            <div>
-              <p>Box 1</p>
-            </div>
-            <div>
+            <div className="logos">
               <p>Box 1</p>
             </div>
           </div>
