@@ -12,7 +12,8 @@ const theme = {
   lightgrey: "#E1E1E1",
   offWhite: "#FFFFF0",
   maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0,0,0,0.09)"
+  bs: "0 12px 24px 0 rgba(0,0,0,0.09)",
+  babypowder: "#FDFFFC"
 };
 
 class MyApp extends App {
@@ -39,6 +40,10 @@ class MyApp extends App {
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
+          rel="stylesheet"
         />
       </Head>
     );
