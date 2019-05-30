@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import * as logos from "../assets/logos";
+import projects from "../assets/projects.json";
 
+console.log(projects);
 const HomeContainer = styled.div`
   background: ${props => props.theme.babypowder};
   display: grid;
@@ -11,9 +13,11 @@ const HomeContainer = styled.div`
   img {
     margin-top: 50px;
   }
-  h1 {
+  .about-header {
     font-family: "Roboto";
     font-weight: 100;
+    width: 100%;
+    text-align: center;
   }
   .textcontainer {
     width: 70%;
@@ -54,7 +58,8 @@ const StacksContainer = styled.div`
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    width: 92%;
+    justify-items: center;
+    width: 83%;
     svg {
       height: 150px;
       width: 150px;
@@ -82,7 +87,9 @@ export class HomePage extends Component {
             width="200px"
             className="home_img__image"
           />
-          <h1>Hi! I am Carlo, Nice to meet you</h1>
+          <div className="about-header">
+            <h1>Hi! I am Carlo, Nice to meet you</h1>
+          </div>
           <div className="textcontainer">
             <p>
               I am a web developer out of texas and currently looking for a job
@@ -119,10 +126,14 @@ export class HomePage extends Component {
           </div>
         </StacksContainer>
         <WorksContainer>
-          <h1>Bonafind</h1>
-          <h1>Foodie Fun</h1>
-          <h1>Now Thats Delicious</h1>
-          <h1>Sick Fits</h1>
+          {projects.map(project => {
+            return (
+              <div className="project-container">
+                <h1>{project.name}</h1>
+                <h1>{project.description}</h1>
+              </div>
+            );
+          })}
         </WorksContainer>
       </>
     );

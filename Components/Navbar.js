@@ -12,7 +12,7 @@ const Appbar = styled.div`
     text-align: center;
     font-family: "radnika_next";
     font-size: 20px;
-    width: 40%;
+    width: 250px;
     display: grid;
     align-items: end;
     h1 {
