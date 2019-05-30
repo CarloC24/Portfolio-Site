@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { redux_logo } from "../assets/logos";
+import * as logos from "../assets/logos";
 
 const HomeContainer = styled.div`
   background: ${props => props.theme.babypowder};
@@ -34,6 +34,11 @@ const WorksContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 `;
+
+const StacksContainer = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+`;
 //Working on it
 export class HomePage extends Component {
   render() {
@@ -62,6 +67,26 @@ export class HomePage extends Component {
             </p>
           </div>
         </HomeContainer>
+        <StacksContainer>
+          <div className="stacks-heading">
+            <h1>Technologies that i've studied or worked on</h1>
+          </div>
+          <div className="stacks-logos">
+            <div className="stack-box">html5</div>
+            <div className="stack-box">CSS3</div>
+            <div className="stack-box">React</div>
+            <div className="stack-box">Redux</div>
+            <div className="stack-box">Vue</div>
+            <div className="stack-box">NodeJS</div>
+            <div className="stack-box">SQL</div>
+            <div className="stack-box">Prisma</div>
+            <div className="stack-box">MongoDB</div>
+            <div className="stack-box">Django</div>
+            <div className="stack-box">Javascript</div>
+            <div className="stack-box">Python</div>
+            <div className="stack-box">C</div>
+          </div>
+        </StacksContainer>
         <WorksContainer>
           <h1>Bonafind</h1>
           <h1>Foodie Fun</h1>
