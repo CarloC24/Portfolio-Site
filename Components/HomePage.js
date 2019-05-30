@@ -12,6 +12,7 @@ const HomeContainer = styled.div`
   grid-gap: 40px;
   img {
     margin-top: 50px;
+    border-radius: 50%;
   }
   .about-header {
     font-family: "Roboto";
@@ -92,15 +93,15 @@ export class HomePage extends Component {
           </div>
           <div className="textcontainer">
             <p>
-              I am a web developer out of texas and currently looking for a job
-              in software development/web development. I recently studied
-              computer science in my local community college and made a switch
-              and tried to get in lambda school and the rest is history! Now I
-              am a graduate of their computer science/web development course. I
-              love developing applications and learning new technologies! I am
-              currently proficient at HTML, CSS3, Javascript, React, VueJS,
-              NodeJS, MongoDB, Prisma, GraphQL, Django and I studied computer
-              science fundamentals using Python and C.
+              I am a web developer residing in Texas and currently looking for a
+              job in software development/web development. I studied computer
+              science in my local community college for a year and a half then i
+              shifted to Lambda school.Now ,I am a graduate of their computer
+              science/web development course. I love developing applications and
+              learning new technologies! I am currently proficient at HTML,
+              CSS3, Javascript, React, VueJS, NodeJS, MongoDB, Prisma, GraphQL,
+              Django and I studied Computer Science fundamentals using Python
+              and C.
             </p>
           </div>
         </HomeContainer>
