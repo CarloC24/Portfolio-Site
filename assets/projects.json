@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Bonafind",
+    "description": "A Simple Business Searching/Reviewer Site that you can log in and post reviews of your favorite businesses. React and Google Maps API for the frontend.PostgreSQL & NodeJS on the Backend"
+  },
+  {
+    "name": "Sickfits",
+    "description": "A feature-rich online shopping store where you can sell buy & sell items. Has a very simple receipt/permissions section. React with Server side rendering and  Apollo for the frontend. NodeJS, Graphql-yoga and Prisma on the backend. "
+  },
+  {
+    "name": "Now thats delicious",
+    "description": "A feature-rich NodeJS application that lets you post a store and get reviews on it!. It can display all the reviewed stores in a static map and show where the store is located in the world! Made in PugJS templating language for the View. MongoDB and Express is used on the backend"
+  },
+  {
+    "name": "Lambda Notes",
+    "description": "A simple CRUD web app where you can create/read/update/delete notes. Made in React/Redux for the frontend. Postgresql,NodeJS and Express on the backend"
+  },
+  {
+    "name": "Foodie Fun",
+    "description": "A simple CRUD web app where you can create/read/update/delete food experiences and share with people! Made in React for the frontend. Postgresql,NodeJS and Express on the backend"
+  }
+]

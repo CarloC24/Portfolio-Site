@@ -37,7 +37,37 @@ const WorksContainer = styled.div`
 
 const StacksContainer = styled.div`
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr, 2fr;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  justify-items: center;
+  background-color: ${props => props.theme.coolblack};
+  .stacks-heading {
+    padding: 40px 0px;
+    h1 {
+      font-family: "Roboto";
+      font-weight: 100;
+    }
+    text-align: center;
+  }
+  .stacks-logos {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 92%;
+    svg {
+      height: 150px;
+      width: 150px;
+    }
+    img {
+      height: 150px;
+      width: 150px;
+    }
+    .stack-box {
+      height: 150px;
+      width: 150px;
+    }
+  }
 `;
 //Working on it
 export class HomePage extends Component {
@@ -69,22 +99,23 @@ export class HomePage extends Component {
         </HomeContainer>
         <StacksContainer>
           <div className="stacks-heading">
-            <h1>Technologies that i've studied or worked on</h1>
+            <h1>Technologies that I've studied or worked on</h1>
           </div>
           <div className="stacks-logos">
-            <div className="stack-box">html5</div>
-            <div className="stack-box">CSS3</div>
-            <div className="stack-box">React</div>
-            <div className="stack-box">Redux</div>
-            <div className="stack-box">Vue</div>
-            <div className="stack-box">NodeJS</div>
-            <div className="stack-box">SQL</div>
-            <div className="stack-box">Prisma</div>
-            <div className="stack-box">MongoDB</div>
-            <div className="stack-box">Django</div>
-            <div className="stack-box">Javascript</div>
-            <div className="stack-box">Python</div>
-            <div className="stack-box">C</div>
+            <div className="stack-box">{logos.html_logo()}</div>
+            <div className="stack-box">{logos.css_logo()}</div>
+            <div className="stack-box">{logos.less_logo()}</div>
+            <div className="stack-box">{logos.react_logo()}</div>
+            <div className="stack-box">{logos.redux_logo()}</div>
+            <div className="stack-box">{logos.vue_logo()}</div>
+            <div className="stack-box">{logos.nodejs_logo()}</div>
+            <div className="stack-box">{logos.sql_logo()}</div>
+            <div className="stack-box">{logos.prisma_logo()}</div>
+            <div className="stack-box">{logos.mongodb_logo()}</div>
+            <div className="stack-box">{logos.django_logo()}</div>
+            <div className="stack-box">{logos.javascript_logo()}</div>
+            <div className="stack-box">{logos.python_logo()}</div>
+            <div className="stack-box">{logos.c_logo()}</div>
           </div>
         </StacksContainer>
         <WorksContainer>
