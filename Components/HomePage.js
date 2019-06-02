@@ -34,10 +34,21 @@ const HomeContainer = styled.div`
 `;
 
 const WorksContainer = styled.div`
-  height: 800px;
-  background: ${props => props.theme.black};
+  background: ${props => props.theme.babypowder};
+  height: 1000px;
   display: grid;
+  grid-gap: 50px;
+  justify-content: space-evenly;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .project-container {
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s all;
+    :hover {
+      /* background: black; */
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
 `;
 
 const StacksContainer = styled.div`
@@ -75,6 +86,7 @@ const StacksContainer = styled.div`
     }
   }
 `;
+
 //Working on it
 export class HomePage extends Component {
   render() {
@@ -114,6 +126,7 @@ export class HomePage extends Component {
             <div className="stack-box">{logos.css_logo()}</div>
             <div className="stack-box">{logos.less_logo()}</div>
             <div className="stack-box">{logos.react_logo()}</div>
+            <div className="stack-box">{logos.apollo_logo()}</div>
             <div className="stack-box">{logos.redux_logo()}</div>
             <div className="stack-box">{logos.vue_logo()}</div>
             <div className="stack-box">{logos.nodejs_logo()}</div>
@@ -130,8 +143,11 @@ export class HomePage extends Component {
           {projects.map(project => {
             return (
               <div className="project-container">
+                <div className="project-picture">
+                  <img alt={project.name} />
+                </div>
                 <h1>{project.name}</h1>
-                <h1>{project.description}</h1>
+                <p>{project.description}</p>
               </div>
             );
           })}
