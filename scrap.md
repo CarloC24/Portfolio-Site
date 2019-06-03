@@ -53,3 +53,13 @@ Recursion - https://www.youtube.com/watch?v=n59qpp0SNDo
 BIG O Geeks for Geeks quick read - https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/
 
 ```
+
+```
+swapping_occured = true
+while swapping_occured
+    swapping_occured = false
+    for i in range(len(arr) - 1)
+        if arr[i] > arr[i + 1]:
+            swapping_occured = true
+            SWAP ALGO
+```

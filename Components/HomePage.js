@@ -37,16 +37,23 @@ const WorksContainer = styled.div`
   background: ${props => props.theme.babypowder};
   height: 1000px;
   display: grid;
+  margin-top: 10px;
   grid-gap: 50px;
   justify-content: space-evenly;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   .project-container {
-    height: 400px;
+    height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s all;
     :hover {
       /* background: black; */
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .project-picture {
+      height: 200px;
+      width: 181px;
+    }
+    .project-about {
     }
   }
 `;
@@ -144,10 +151,15 @@ export class HomePage extends Component {
             return (
               <div className="project-container">
                 <div className="project-picture">
-                  <img alt={project.name} />
+                  <img
+                    alt={project.name}
+                    src="https://images.unsplash.com/photo-1533709752211-118fcaf03312?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                  />
                 </div>
-                <h1>{project.name}</h1>
-                <p>{project.description}</p>
+                <div className="project-about">
+                  <h1>{project.name}</h1>
+                  <p>{project.description}</p>
+                </div>
               </div>
             );
           })}
