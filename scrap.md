@@ -34,3 +34,22 @@ Github Repo -
 * Dont forget to add me as a collaborator(This will count as your attendance.)
 * Submit a airtable form after you finish your sprint challenge https://airtable.com/shruSVU97eR6CHE5A
 ```
+
+```
+
+As we go through the sorting module please try to find time before the GP on monday morning to review this material to help on the project for the sorting module.
+
+
+TK Link - https://learn.lambdaschool.com/cs/module/reck76spx26begsqe
+
+Github Repo - https://learn.lambdaschool.com/cs/module/reck76spx26begsqe
+
+Runtime Complexity Video - https://www.youtube.com/watch?v=rEx9E_Oq8xg
+
+Linear & Binary Search - https://www.youtube.com/watch?v=a1oLy-ft8o8
+
+Recursion - https://www.youtube.com/watch?v=n59qpp0SNDo
+
+BIG O Geeks for Geeks quick read - https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/
+
+```
