@@ -63,3 +63,16 @@ while swapping_occured
             swapping_occured = true
             SWAP ALGO
 ```
+
+```
+Problems
+1. Counting Votes - Davina Taylor
+2. Integer Pairs - Kawsar Huseen
+3. Matrix Spiral Copy - Joel Bartlett
+4. Largest Contiguous Sum - Michael Checo
+5. Search In Sorted Matrix - Shreyas Jothish
+6. Suffix Trie - Thomas Hessburg
+7. Zeroes to the Right - AJ Brush
+
+You will get interviewed with somebody from your PM group. You will show step by step your partner how to solve your problem.
+```
