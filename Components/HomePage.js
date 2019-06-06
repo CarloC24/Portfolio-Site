@@ -79,14 +79,14 @@ const WorksContainer = styled.div`
   margin-top: 10px;
   grid-gap: 50px;
   justify-content: space-evenly;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   .project-container {
     height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s all;
-    width: 250px;
+    width: 350px;
     margin: 20px;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
     :hover {
       /* background: black; */
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -94,6 +94,7 @@ const WorksContainer = styled.div`
     .project-picture {
       img {
         width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
       }
     }
     .project-about {
@@ -107,6 +108,8 @@ const WorksContainer = styled.div`
       p {
         word-break: break-word;
         font-family: "Roboto";
+        font-size: 16px;
+        line-height: 1.6;
         text-align: center;
       }
     }
