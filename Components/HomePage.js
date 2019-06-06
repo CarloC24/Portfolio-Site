@@ -81,7 +81,7 @@ const WorksContainer = styled.div`
   justify-content: space-evenly;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   .project-container {
-    height: 500px;
+    height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s all;
     width: 350px;
@@ -111,6 +111,30 @@ const WorksContainer = styled.div`
         font-size: 16px;
         line-height: 1.6;
         text-align: center;
+      }
+    }
+    .project-icons {
+      height: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .project-icons--single {
+      height: 70px;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
       }
     }
   }
@@ -173,10 +197,12 @@ export class HomePage extends Component {
             return (
               <div className="project-container">
                 <div className="project-picture">
-                  <img
-                    alt={project.name}
-                    src="https://images.unsplash.com/photo-1533709752211-118fcaf03312?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                  />
+                  <a href={project.project_link}>
+                    <img
+                      alt={project.name}
+                      src="https://images.unsplash.com/photo-1533709752211-118fcaf03312?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    />
+                  </a>
                 </div>
                 <div className="project-about">
                   <div className="about-heading">
@@ -184,6 +210,16 @@ export class HomePage extends Component {
                   </div>
                   <p>{project.description}</p>
                 </div>
+                {project.github_link ? (
+                  <div className="project-icons">
+                    <a href={project.github_link}>{logos.github_logo()}</a>
+                    <a href={project.project_link}>{logos.www_logo()}</a>
+                  </div>
+                ) : (
+                  <div className="project-icons--single">
+                    <a href={project.project_link}>{logos.www_logo()}</a>
+                  </div>
+                )}
               </div>
             );
           })}
