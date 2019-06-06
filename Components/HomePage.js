@@ -33,32 +33,6 @@ const HomeContainer = styled.div`
   }
 `;
 
-const WorksContainer = styled.div`
-  background: ${props => props.theme.babypowder};
-  height: 1000px;
-  display: grid;
-  margin-top: 10px;
-  grid-gap: 50px;
-  justify-content: space-evenly;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  .project-container {
-    height: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s all;
-    :hover {
-      /* background: black; */
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
-    .project-picture {
-      img {
-        width: 100%;
-      }
-    }
-    .project-about {
-    }
-  }
-`;
-
 const StacksContainer = styled.div`
   display: grid;
   grid-template-rows: 1fr, 2fr;
@@ -76,7 +50,7 @@ const StacksContainer = styled.div`
   }
   .stacks-logos {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
     width: 83%;
@@ -91,6 +65,50 @@ const StacksContainer = styled.div`
     .stack-box {
       height: 150px;
       width: 150px;
+      transition: 0.1s;
+      :hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+`;
+const WorksContainer = styled.div`
+  background: ${props => props.theme.babypowder};
+  height: 1000px;
+  display: grid;
+  margin-top: 10px;
+  grid-gap: 50px;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .project-container {
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s all;
+    width: 250px;
+    margin: 20px;
+    margin-bottom: 10px;
+    :hover {
+      /* background: black; */
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .project-picture {
+      img {
+        width: 100%;
+      }
+    }
+    .project-about {
+      .about-heading {
+        h1 {
+          text-align: center;
+          font-weight: 200;
+          font-family: "Roboto";
+        }
+      }
+      p {
+        word-break: break-word;
+        font-family: "Roboto";
+        text-align: center;
+      }
     }
   }
 `;
@@ -158,7 +176,9 @@ export class HomePage extends Component {
                   />
                 </div>
                 <div className="project-about">
-                  <h1>{project.name}</h1>
+                  <div className="about-heading">
+                    <h1>{project.name}</h1>
+                  </div>
                   <p>{project.description}</p>
                 </div>
               </div>

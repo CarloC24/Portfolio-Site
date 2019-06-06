@@ -76,3 +76,29 @@ Problems
 
 You will get interviewed with somebody from your PM group. You will show step by step your partner how to solve your problem.
 ```
+
+```
+Pair Programming Partners
+
+Davina - Michael
+Kawsar - Thomas
+AJ - Joel
+Shreyas - Carlo
+
+```
+
+How to Write and Analyze
+
+TK Link - https://learn.lambdaschool.com/cs/module/recrCuZQMVI6LvxhD
+
+Github repo - https://github.com/LambdaSchool/Algorithms
+
+---TK Videos---
+
+Coming Up with a First Pass Solution - https://www.youtube.com/watch?v=vtoYShxbPQw
+
+Improving upon a first pass solution - https://www.youtube.com/watch?v=1QCmUv4-sIc
+
+```
+
+```
