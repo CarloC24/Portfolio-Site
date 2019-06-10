@@ -3,7 +3,6 @@ import styled from "styled-components";
 import * as logos from "../assets/logos";
 import projects from "../assets/projects.json";
 
-console.log(projects);
 const HomeContainer = styled.div`
   background: ${props => props.theme.babypowder};
   display: grid;
@@ -198,10 +197,7 @@ export class HomePage extends Component {
               <div className="project-container">
                 <div className="project-picture">
                   <a href={project.project_link}>
-                    <img
-                      alt={project.name}
-                      src="https://images.unsplash.com/photo-1533709752211-118fcaf03312?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                    />
+                    <img src="../static/Bonafind.jpg" alt={project.name} />
                   </a>
                 </div>
                 <div className="project-about">
