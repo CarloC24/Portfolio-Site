@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { linkedIn_logo, github_logo } from "../assets/logos";
+import { Rotate, Fade } from "react-reveal";
 
 const Appbar = styled.div`
   display: grid;
@@ -61,23 +62,25 @@ export class Navbar extends Component {
         <div className="namecontainer">
           <h1>Carlo Clamucha</h1>
         </div>
-        <div className="link-container">
-          <div className="linkimage">{linkedIn_logo()}</div>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
-          >
-            LinkedIn
-          </a>
-          <div className="linkimagegithub">{github_logo()}</div>
-          <a
-            target="_blank"
-            href="https://github.com/CarloC24"
-            className="githublink"
-          >
-            Github
-          </a>
-        </div>
+        <Fade top cascade duration={500}>
+          <div className="link-container">
+            <div className="linkimage">{linkedIn_logo()}</div>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
+            >
+              LinkedIn
+            </a>
+            <div className="linkimagegithub">{github_logo()}</div>
+            <a
+              target="_blank"
+              href="https://github.com/CarloC24"
+              className="githublink"
+            >
+              Github
+            </a>
+          </div>
+        </Fade>
       </Appbar>
     );
   }

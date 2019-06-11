@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import * as logos from "../assets/logos";
 import projects from "../assets/projects.json";
+import { Fade, Zoom } from "react-reveal";
 
 const HomeContainer = styled.div`
   background: ${props => props.theme.babypowder};
@@ -64,10 +65,6 @@ const StacksContainer = styled.div`
     .stack-box {
       height: 150px;
       width: 150px;
-      transition: 0.1s;
-      :hover {
-        transform: scale(1.3);
-      }
     }
   }
 `;
@@ -78,6 +75,7 @@ const WorksContainer = styled.div`
   margin-top: 10px;
   grid-gap: 50px;
   justify-content: space-evenly;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   .project-container {
     height: 100%;
@@ -152,73 +150,79 @@ export class HomePage extends Component {
             width="200px"
             className="home_img__image"
           />
-          <div className="about-header">
-            <h1>Hi! I am Carlo, Nice to meet you</h1>
-          </div>
-          <div className="textcontainer">
-            <p>
-              I am a web developer residing in Texas and currently looking for a
-              job in software development/web development. I studied computer
-              science in my local community college for a year and a half then i
-              shifted to Lambda school.Now ,I am a graduate of their computer
-              science/web development course. I love developing applications and
-              learning new technologies! I am currently proficient at HTML,
-              CSS3, Javascript, React, VueJS, NodeJS, MongoDB, Prisma, GraphQL,
-              Django and I studied Computer Science fundamentals using Python
-              and C.
-            </p>
-          </div>
+          <Fade top cascade>
+            <div className="about-header">
+              <h1>Hi! I am Carlo, Nice to meet you</h1>
+            </div>
+            <div className="textcontainer">
+              <p>
+                I am a web developer residing in Texas and currently looking for
+                a job in software development/web development. I studied
+                computer science in my local community college for a year and a
+                half then i shifted to Lambda school.Now ,I am a graduate of
+                their computer science/web development course. I love developing
+                applications and learning new technologies! I am currently
+                proficient at HTML, CSS3, Javascript, React, VueJS, NodeJS,
+                MongoDB, Prisma, GraphQL, Django and I studied Computer Science
+                fundamentals using Python and C.
+              </p>
+            </div>
+          </Fade>
         </HomeContainer>
         <StacksContainer>
           <div className="stacks-heading">
             <h1>Technologies that I've studied or worked on</h1>
           </div>
-          <div className="stacks-logos">
-            <div className="stack-box">{logos.html_logo()}</div>
-            <div className="stack-box">{logos.css_logo()}</div>
-            <div className="stack-box">{logos.less_logo()}</div>
-            <div className="stack-box">{logos.react_logo()}</div>
-            <div className="stack-box">{logos.apollo_logo()}</div>
-            <div className="stack-box">{logos.redux_logo()}</div>
-            <div className="stack-box">{logos.vue_logo()}</div>
-            <div className="stack-box">{logos.nodejs_logo()}</div>
-            <div className="stack-box">{logos.sql_logo()}</div>
-            <div className="stack-box">{logos.prisma_logo()}</div>
-            <div className="stack-box">{logos.mongodb_logo()}</div>
-            <div className="stack-box">{logos.django_logo()}</div>
-            <div className="stack-box">{logos.javascript_logo()}</div>
-            <div className="stack-box">{logos.python_logo()}</div>
-            <div className="stack-box">{logos.c_logo()}</div>
-          </div>
+          <Zoom top cascade>
+            <div className="stacks-logos">
+              <div className="stack-box">{logos.html_logo()}</div>
+              <div className="stack-box">{logos.css_logo()}</div>
+              <div className="stack-box">{logos.less_logo()}</div>
+              <div className="stack-box">{logos.react_logo()}</div>
+              <div className="stack-box">{logos.apollo_logo()}</div>
+              <div className="stack-box">{logos.redux_logo()}</div>
+              <div className="stack-box">{logos.vue_logo()}</div>
+              <div className="stack-box">{logos.nodejs_logo()}</div>
+              <div className="stack-box">{logos.sql_logo()}</div>
+              <div className="stack-box">{logos.prisma_logo()}</div>
+              <div className="stack-box">{logos.mongodb_logo()}</div>
+              <div className="stack-box">{logos.django_logo()}</div>
+              <div className="stack-box">{logos.javascript_logo()}</div>
+              <div className="stack-box">{logos.python_logo()}</div>
+              <div className="stack-box">{logos.c_logo()}</div>
+            </div>
+          </Zoom>
         </StacksContainer>
         <WorksContainer>
-          {projects.map(project => {
-            return (
-              <div className="project-container">
-                <div className="project-picture">
-                  <a href={project.project_link} target="_blank">
-                    <img src={project.gif_link} alt={project.name} />
-                  </a>
+          <Zoom top cascade>
+            {projects.map(project => {
+              return (
+                <div className="project-container">
+                  <div className="project-picture">
+                    <a href={project.project_link} target="_blank">
+                      <img src={project.gif_link} alt={project.name} />
+                    </a>
+                  </div>
+                  <div className="project-about">
+                    <div className="about-heading">
+                      <h1>{project.name}</h1>
+                    </div>
+                    <p>{project.description}</p>
+                  </div>
+                  {project.github_link ? (
+                    <div className="project-icons">
+                      <a href={project.github_link}>{logos.github_logo()}</a>
+                      <a href={project.project_link}>{logos.www_logo()}</a>
+                    </div>
+                  ) : (
+                    <div className="project-icons--single">
+                      <a href={project.project_link}>{logos.www_logo()}</a>
+                    </div>
+                  )}
                 </div>
-                <div className="project-about">
-                  <div className="about-heading">
-                    <h1>{project.name}</h1>
-                  </div>
-                  <p>{project.description}</p>
-                </div>
-                {project.github_link ? (
-                  <div className="project-icons">
-                    <a href={project.github_link}>{logos.github_logo()}</a>
-                    <a href={project.project_link}>{logos.www_logo()}</a>
-                  </div>
-                ) : (
-                  <div className="project-icons--single">
-                    <a href={project.project_link}>{logos.www_logo()}</a>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+              );
+            })}
+          </Zoom>
         </WorksContainer>
       </>
     );
