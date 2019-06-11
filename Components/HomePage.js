@@ -197,7 +197,7 @@ export class HomePage extends Component {
               <div className="project-container">
                 <div className="project-picture">
                   <a href={project.project_link}>
-                    <img src="../static/Bonafind.jpg" alt={project.name} />
+                    <img src="../static/BonafindGif.gif" alt={project.name} />
                   </a>
                 </div>
                 <div className="project-about">
