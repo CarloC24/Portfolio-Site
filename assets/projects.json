@@ -3,22 +3,26 @@
     "name": "Bonafind",
     "description": "A Simple Business Searching/Reviewer Site that you can log in and do a CRUD operation on reviews of your favorite businesses.Everybody can add a store in the and comment their experiences on it. React for the frontend.PostgreSQL & NodeJS on the Backend",
     "project_link": "bonafind.biz",
-    "github_link": "https://github.com/Lambda-School-Labs/labs9-business-reviews"
+    "github_link": "https://github.com/Lambda-School-Labs/labs9-business-reviews",
+    "gif_link": "../static/BonafindGif.gif"
   },
   {
     "name": "Sickfits",
     "description": "A feature-rich online shopping store where you can sell buy & sell items. Has a very simple receipt/permissions section. React with Server side rendering and  Apollo for the frontend. NodeJS, Graphql-yoga and Prisma on the backend. ",
-    "project_link": "https://frontend.carloclamucha.now.sh/"
+    "project_link": "https://frontend.carloclamucha.now.sh/",
+    "gif_link": "../static/SickFits.gif"
   },
   {
     "name": "Now thats delicious",
     "description": "A feature-rich NodeJS application that lets you post a store and get reviews on it!. It can display all the reviewed stores in a static map and show where the store is located in the world! Made in PugJS templating language for the View. MongoDB and Express is used on the backend",
-    "project_link": "http://192.241.146.61/"
+    "project_link": "http://192.241.146.61/",
+    "gif_link": "../static/NWD.gif"
   },
   {
     "name": "Foodie Fun",
     "description": "A simple CRUD web app where you can create/read/update/delete food experiences and share with people! Made in React for the frontend. Postgresql,NodeJS and Express on the backend",
     "project_link": "https://bw-foodie-fun.github.io/UI-JT/",
-    "github_link": "https://github.com/bw-foodie-fun"
+    "github_link": "https://github.com/bw-foodie-fun",
+    "gif_link": "../static/FoodieFun.gif"
   }
 ]
