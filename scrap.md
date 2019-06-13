@@ -87,6 +87,31 @@ Shreyas - Carlo
 
 ```
 
+```
+You will solve your problem and explain the process of solving the problem every step of the way to your partner.
+
+Coding Challenges
+AJ - Balanced Brackets
+Thomas - Reversed Link List
+Davina - Sort Top Stores
+Kawsar - Zeroes to the Right
+Michael - Set of Stacks
+Joel - Depth First Search
+Shreyas - Min Jumps
+
+
+
+Pair Program Partners
+
+AJ - Davina
+Kawsar - Joel
+Shreyas - Michael
+Thomas - Jubilee Young
+
+
+LambdaSchool Whiteboard pairings Repo - https://github.com/LambdaSchool/Whiteboard-Pairing
+```
+
 DATA STRUCTURES
 
 Data Structures TK Link -https://learn.lambdaschool.com/cs/module/recuhKMtdYvWMeXMz
