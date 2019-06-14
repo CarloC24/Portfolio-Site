@@ -391,3 +391,11 @@ export const www_logo = () => {
     <img src="https://cdn0.iconfinder.com/data/icons/marketing-essential/48/v-12-512.png" />
   );
 };
+
+export const email_logo = () => {
+  return <img src="https://image.flaticon.com/icons/png/512/732/732200.png" />;
+};
+
+export const resume_logo = () => {
+  return <img src="https://image.flaticon.com/icons/svg/1102/1102457.svg" />;
+};

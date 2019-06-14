@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { linkedIn_logo, github_logo } from "../assets/logos";
+import {
+  linkedIn_logo,
+  github_logo,
+  email_logo,
+  resume_logo
+} from "../assets/logos";
 import { Rotate, Fade } from "react-reveal";
 
 const Appbar = styled.div`
   display: grid;
   grid-gap: 20px;
   justify-items: center;
-  height: 300px;
+  height: 400px;
   .namecontainer {
     border-bottom: 5px solid ${props => props.theme.offWhite};
     text-align: center;
@@ -26,6 +31,7 @@ const Appbar = styled.div`
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     font-size: 25px;
+    height: 60px;
     color: ${props => props.theme.offWhite};
     .linkimage {
       display: grid;
@@ -51,6 +57,49 @@ const Appbar = styled.div`
     }
     .githublink {
       margin-left: -35px;
+    }
+  }
+  .email-container {
+    width: 24%;
+    display: grid;
+    /* justify-items: center; */
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -50px;
+    padding: 20px 0;
+    h1 {
+      font-family: "Roboto";
+      font-size: 20px;
+      color: ${props => props.theme.offWhite};
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .resume-link {
+    width: 24%;
+    .resume-container {
+      width: 100%;
+      display: grid;
+      /* justify-items: center; */
+      grid-template-columns: 77px 1fr;
+      margin-top: -50px;
+      /* justify-items: start; */
+      padding: 20px 0;
+      h1 {
+        font-family: "Roboto";
+        font-size: 20px;
+        /* margin-right: -10px; */
+        color: ${props => props.theme.offWhite};
+      }
+      .resume-image {
+        width: 50px;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
   }
 `;
@@ -81,6 +130,20 @@ export class Navbar extends Component {
             </a>
           </div>
         </Fade>
+        <div className="email-container">
+          <div className="email-image">{email_logo()}</div>
+          <h1>carlo.clamucha@gmail.com</h1>
+        </div>
+        <a
+          className="resume-link"
+          target="_blank"
+          href="https://resume.creddle.io/resume/fwoe7ya3wlk"
+        >
+          <div className="resume-container">
+            <div className="resume-image">{resume_logo()}</div>
+            <h1>My Resume</h1>
+          </div>
+        </a>
       </Appbar>
     );
   }
