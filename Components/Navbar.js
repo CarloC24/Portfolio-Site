@@ -111,7 +111,7 @@ export class Navbar extends Component {
         <div className="namecontainer">
           <h1>Carlo Clamucha</h1>
         </div>
-        <Fade top cascade duration={500}>
+        <Fade top cascade duration={700}>
           <div className="link-container">
             <div className="linkimage">{linkedIn_logo()}</div>
             <a
@@ -129,21 +129,21 @@ export class Navbar extends Component {
               Github
             </a>
           </div>
-        </Fade>
-        <div className="email-container">
-          <div className="email-image">{email_logo()}</div>
-          <h1>carlo.clamucha@gmail.com</h1>
-        </div>
-        <a
-          className="resume-link"
-          target="_blank"
-          href="https://resume.creddle.io/resume/fwoe7ya3wlk"
-        >
-          <div className="resume-container">
-            <div className="resume-image">{resume_logo()}</div>
-            <h1>My Resume</h1>
+          <div className="email-container">
+            <div className="email-image">{email_logo()}</div>
+            <h1>carlo.clamucha@gmail.com</h1>
           </div>
-        </a>
+          <a
+            className="resume-link"
+            target="_blank"
+            href="https://resume.creddle.io/resume/fwoe7ya3wlk"
+          >
+            <div className="resume-container">
+              <div className="resume-image">{resume_logo()}</div>
+              <h1>My Resume</h1>
+            </div>
+          </a>
+        </Fade>
       </Appbar>
     );
   }
