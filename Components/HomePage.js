@@ -87,7 +87,7 @@ const WorksContainer = styled.div`
     padding-bottom: 20px;
     :hover {
       /* background: black; */
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 24px 64px 0 rgba(0, 0, 0, 0.2);
     }
     .project-picture {
       img {

@@ -60,11 +60,11 @@ const Appbar = styled.div`
     }
   }
   .email-container {
-    width: 24%;
+    width: 320px;
     display: grid;
     /* justify-items: center; */
-    justify-content: space-around;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-template-columns: 65px 1fr;
     margin-top: -50px;
     padding: 20px 0;
     h1 {
@@ -78,15 +78,12 @@ const Appbar = styled.div`
     }
   }
   .resume-link {
-    width: 24%;
+    text-decoration: none;
+    width: 320px;
+    margin-top: -30px;
     .resume-container {
-      width: 100%;
       display: grid;
-      /* justify-items: center; */
-      grid-template-columns: 77px 1fr;
-      margin-top: -50px;
-      /* justify-items: start; */
-      padding: 20px 0;
+      grid-template-columns: 65px 1fr;
       h1 {
         font-family: "Roboto";
         font-size: 20px;
@@ -94,7 +91,6 @@ const Appbar = styled.div`
         color: ${props => props.theme.offWhite};
       }
       .resume-image {
-        width: 50px;
         img {
           width: 50px;
           height: 50px;
@@ -140,7 +136,7 @@ export class Navbar extends Component {
           >
             <div className="resume-container">
               <div className="resume-image">{resume_logo()}</div>
-              <h1>My Resume</h1>
+              <h1>View my own Resume</h1>
             </div>
           </a>
         </Fade>
