@@ -195,3 +195,127 @@ Joel - Michael
 AJ - Carlo
 
 ```
+
+Pair Programming Partners
+
+Davina - Carlo
+Kawsar - Thomas
+Joel - Shreyas
+AJ - Michael
+
+Topic - talk about how you solved earliest ancestor or the social graph
+
+```
+
+```
+
+Michael Checo - I'll serve soup
+
+##WebUI
+Candance Rossi
+May Ng
+##Frontend
+Peishan Lee
+Laura Dougherty
+##Backend
+Alfonso Garcia
+
+```
+
+```
+
+Davina Taylor - Foodie Fun
+
+##WebUI
+Tania Keller
+Jonathon Green
+##Frontend
+Blake Goms
+Jacob McGrath
+##Backend
+Nguyen Vo
+
+```
+
+```
+
+Joel Bartlett - African Marketplace
+
+##WebUI
+Keshawn Sharper
+Saipher Zureti
+Daniela Arias Ordonez
+##Frontend
+Vincent Nmergini
+##Backend
+Leigh Martin
+
+```
+
+```
+
+Andrew Brush - Art Portfolio
+
+##WebUI
+William Brooks
+Nisa
+Greg Poirer
+##Frontend
+Patrick Rodrigues
+##Backend
+Thierry Joux
+##UX
+Kimberly Ho
+
+```
+
+```
+
+Kawsar Hussen - Wanderlust
+
+##WebUI
+Patrick Baldwin
+Tommy Lee Coleman
+##Frontend
+Sascha Majewski
+Jeff Oliver
+##Backend
+Rogelio Caballero
+##UX
+Landon Bassett
+
+```
+
+```
+
+Albert Wong/Shreyas Jothish - AirBnB optimal price
+
+##WebUI
+Kelly Moreira
+Noor Al Darraji
+##Frontend
+David Clavijo
+Christopher Carter
+##Backend
+Sam Jeffcoat
+##Data Science
+Connor Heraty
+Tomas fox
+
+```
+
+```
+
+Thomas Hessburg - Org Chart
+
+##WebUI
+Lily Zhou
+Hamidou Diallo
+##Frontend
+Anthony Piazza
+##Backend
+Dwayne Pearson
+
+```
+
+```
