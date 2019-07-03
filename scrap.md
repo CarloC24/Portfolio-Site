@@ -322,12 +322,12 @@ Dwayne Pearson
 
 BUILD-WEEK
 
-1.        Watch the video.... `https://youtu.be/oUOz5FfckSg`
-2.        Set Up Trello board
-3.        Create a Github Organization ---  https://help.github.com/en/articles/creating-a-new-organization-from-scratch
-4.        Create a Slack channel invite your team members their respective PM and  me(thanks)
-5.        You need to hold daily stand-up with your team (prefer in morning so we can have our evening stand-up)
-6.       Suggestion ..... pin these links in your channel as you need them frequently
+1.           Watch the video.... `https://youtu.be/oUOz5FfckSg`
+2.           Set Up Trello board
+3.           Create a Github Organization ---  https://help.github.com/en/articles/creating-a-new-organization-from-scratch
+4.           Create a Slack channel invite your team members their respective PM and  me(thanks)
+5.           You need to hold daily stand-up with your team (prefer in morning so we can have our evening stand-up)
+6.          Suggestion ..... pin these links in your channel as you need them frequently
     --> https://www.notion.so/Policies-and-Procedures-19e679fc1a284b668d8132dd8d7228cd
     --> Trello board Link
     --> Github-Organization link
@@ -342,6 +342,15 @@ F/E APIS - Zoom API
 
 B/E - NodeJS
 B/E Packages - PassportJS , SocketIO
+
+```
+
+```
+
+email:carlo.clamucha@gmail.com
+linkedIn:https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/
+github:https://github.com/CarloC24
+summary:I am a web developer residing in Texas, and currently looking for a job in software development/web development. I studied computer science at my local community college for a year and a half before I joined Lambda School. I've recently graduated for the Lambda School web development course.
 
 ```
 
