@@ -7,6 +7,13 @@
     "gif_link": "../static/BonafindGif.gif"
   },
   {
+    "name": "Pair Me",
+    "description": "A 2 day hackathon project that lets you pair program with other developers! Simply put in a name and a link then you can pair with the pair button. ReactJS and SocketIO for the frontend and NodeJS, Express, SocketIO for the backend.",
+    "project_link": "https://pair-me.netlify.com",
+    "github_link": "https://github.com/pairme",
+    "gif_link": "../static/pairme.gif"
+  },
+  {
     "name": "Sickfits",
     "description": "A feature-rich online shopping store where you can sell buy & sell items. Has a very simple receipt/permissions section. React with Server side rendering and  Apollo for the frontend. NodeJS, Graphql-yoga and Prisma on the backend. ",
     "project_link": "https://frontend.carloclamucha.now.sh/",
