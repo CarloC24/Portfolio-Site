@@ -157,17 +157,10 @@ export class HomePage extends Component {
             </div>
             <div className="textcontainer">
               <p>
-                I am a web developer residing in Texas, and currently looking
-                for a job in software development/web development. I studied
-                computer science at my local community college for a year and a
-                half before I joined Lambda School. I've recently graduated for
-                the Lambda School web development course.{" "}
-              </p>
-              <p>
-                I love developing applications and learning new technologies! I
-                am currently proficient at HTML, CSS3, Javascript, React, VueJS,
-                NodeJS, MongoDB, Prisma, GraphQL, Django and I studied Computer
-                Science fundamentals using Python and C.
+                I am a texas based web developer / software developer looking
+                for a job in web development / software development / fullstack
+                role with a great company. Check out my projects down below and
+                Feel free to reach out at any of my links.{" "}
               </p>
             </div>
           </Fade>
