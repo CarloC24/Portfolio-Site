@@ -222,6 +222,9 @@ template {
 
 [hidden] {
   display: none;
+}
+html {
+  scroll-behavior: smooth;
 }`;
 
 export default GlobalStyle;

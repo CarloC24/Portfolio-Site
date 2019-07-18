@@ -23,7 +23,7 @@ const HomeContainer = styled.div`
   .textcontainer {
     width: 70%;
     font-family: "Noto Serif", serif;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.4;
     word-break: break-word;
     text-align: center;
@@ -189,7 +189,7 @@ export class HomePage extends Component {
             </div>
           </Zoom>
         </StacksContainer>
-        <WorksContainer>
+        <WorksContainer id="projects">
           <Zoom top cascade>
             {projects.map(project => {
               return (
