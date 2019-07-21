@@ -87,7 +87,8 @@ const WorksContainer = styled.div`
     padding-bottom: 20px;
     :hover {
       /* background: black; */
-      box-shadow: 0 24px 64px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+      transform:translateY(-5px);
     }
     .project-picture {
       img {
@@ -144,6 +145,7 @@ export class HomePage extends Component {
     return (
       <>
         <HomeContainer>
+        {/* Change Layout?? */}
           <img
             src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
             alt="mypicture"
