@@ -105,7 +105,7 @@ export class Navbar extends Component {
     return (
       <Appbar>
         <div className="namecontainer">
-          <h1>Carlo Clamucha</h1>
+          <h1>Site on maintenance due to style changes :)</h1>
         </div>
         <Fade top cascade duration={700}>
           <div className="link-container">
