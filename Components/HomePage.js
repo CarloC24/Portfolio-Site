@@ -70,38 +70,50 @@ const StacksContainer = styled.div`
   }
 `;
 const WorksContainer = styled.div`
-  background: ${props => props.theme.babypowder};
+  background: #353b3f;
   height: 100%;
+
   display: grid;
   margin-top: 10px;
   grid-gap: 50px;
   justify-content: space-evenly;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
-    height: 585px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 400px;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8);
     transition: 0.3s all;
-    width: 700px;
+    background: white;
+    width: 60%;
     margin: 20px;
     padding-bottom: 20px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "img img info info"
+      "img img info info"
+      "logo logo info info";
+    /* grid-template-columns: 2fr 1fr; */
     :hover {
       /* background: black; */
-      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+      /* box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); */
       transform: translateY(-5px);
     }
     .project-picture {
+      grid-area: img;
       img {
-        width: 450px;
+        width: 50%;
         margin: 20px;
+        height: 50px;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
       }
     }
     .project-about {
+      grid-area: info;
+      width: 50%;
+      height: 50px;
       .about-heading {
+        height: 50px;
         h1 {
           text-align: center;
           font-weight: 200;
@@ -109,15 +121,18 @@ const WorksContainer = styled.div`
         }
       }
       p {
+        height: 50px;
         word-break: break-word;
         font-family: "Roboto";
         font-size: 16px;
         line-height: 1.6;
-        text-align: center;
+        text-align: justify;
       }
     }
     .project-icons {
+      grid-area: logo;
       height: 70px;
+      width: 50%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
