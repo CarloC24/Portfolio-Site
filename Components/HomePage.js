@@ -72,12 +72,10 @@ const StacksContainer = styled.div`
 const WorksContainer = styled.div`
   background: #353b3f;
   height: 100%;
-
-  display: grid;
   margin-top: 10px;
-  grid-gap: 50px;
-  justify-content: space-evenly;
+  display: grid;
   justify-items: center;
+  align-items: center;
   /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
     height: 400px;
@@ -86,75 +84,22 @@ const WorksContainer = styled.div`
     background: white;
     width: 60%;
     margin: 20px;
+    /*  put this in the picture clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
     padding-bottom: 20px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-      "img img info info"
-      "img img info info"
-      "logo logo info info";
-    /* grid-template-columns: 2fr 1fr; */
-    :hover {
-      /* background: black; */
-      /* box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); */
-      transform: translateY(-5px);
-    }
     .project-picture {
-      grid-area: img;
-      img {
-        width: 50%;
-        margin: 20px;
-        height: 50px;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      :hover {
+        /* background: black; */
+        /* box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); */
+        /* transform: translateY(-5px); */
       }
+      position: absolute;
+      width: 60%;
+      height: 400px;
     }
-    .project-about {
-      grid-area: info;
-      width: 50%;
-      height: 50px;
-      .about-heading {
-        height: 50px;
-        h1 {
-          text-align: center;
-          font-weight: 200;
-          font-family: "Roboto";
-        }
-      }
-      p {
-        height: 50px;
-        word-break: break-word;
-        font-family: "Roboto";
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
-      }
-    }
-    .project-icons {
-      grid-area: logo;
-      height: 70px;
-      width: 50%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
-      justify-content: center;
-      align-items: center;
-      img {
-        width: 100px;
-        height: 100px;
-      }
-    }
-    .project-icons--single {
-      height: 70px;
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      justify-content: center;
-      align-items: center;
-      img {
-        width: 100px;
-        height: 100px;
-      }
-    }
+    /* grid-template-areas:
+      "img img img info info"
+      "img img img info info"
+      "logo logo logo info  info"; */
   }
 `;
 
@@ -165,13 +110,14 @@ export class HomePage extends Component {
       <>
         <HomeContainer>
           {/* Change Layout?? */}
-          <img
+          {/* UNCOMMENT IMAGE WHEN READY TO SHOW */}
+          {/* <img
             src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
             alt="mypicture"
             height="200px"
             width="200px"
             className="home_img__image"
-          />
+          /> */}
           <Fade top cascade>
             <div className="about-header">
               <h1>Hi! I am Carlo, Nice to meet you</h1>
@@ -215,12 +161,14 @@ export class HomePage extends Component {
             {projects.map(project => {
               return (
                 <div className="project-container">
-                  <div className="project-picture">
-                    <a href={project.project_link} target="_blank">
-                      <img src={project.gif_link} alt={project.name} />
-                    </a>
-                  </div>
-                  <div className="project-about">
+                  {/* <img src={project.gif_link} alt={project.name} /> */}
+                  {/* UNCOMMENT THIS WHEN READY TO OVERLAP */}
+                  <img
+                    className="project-picture"
+                    src={project.gif_link}
+                    alt={project.name}
+                  />
+                  {/* <div className="project-about">
                     <div className="about-heading">
                       <h1>{project.name}</h1>
                     </div>
@@ -235,7 +183,7 @@ export class HomePage extends Component {
                     <div className="project-icons--single">
                       <a href={project.project_link}>{logos.www_logo()}</a>
                     </div>
-                  )}
+                  )} */}
                 </div>
               );
             })}
