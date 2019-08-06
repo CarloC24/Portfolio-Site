@@ -77,22 +77,26 @@ const WorksContainer = styled.div`
   grid-gap: 50px;
   justify-content: space-evenly;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   .project-container {
     height: 585px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s all;
-    width: 350px;
+    width: 700px;
     margin: 20px;
     padding-bottom: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
     :hover {
       /* background: black; */
       box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-      transform:translateY(-5px);
+      transform: translateY(-5px);
     }
     .project-picture {
       img {
-        width: 100%;
+        width: 450px;
+        margin: 20px;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
       }
     }
@@ -145,7 +149,7 @@ export class HomePage extends Component {
     return (
       <>
         <HomeContainer>
-        {/* Change Layout?? */}
+          {/* Change Layout?? */}
           <img
             src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
             alt="mypicture"
