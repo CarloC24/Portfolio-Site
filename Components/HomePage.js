@@ -70,7 +70,7 @@ const StacksContainer = styled.div`
   }
 `;
 const WorksContainer = styled.div`
-  background: #353b3f;
+  /* background: #353b3f; */
   height: 100%;
   margin-top: 10px;
   display: grid;
@@ -79,22 +79,25 @@ const WorksContainer = styled.div`
   /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
     height: 400px;
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s all;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     background: white;
-    width: 60%;
+    width: 90%;
     margin: 20px;
     /*  put this in the picture clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
     padding-bottom: 20px;
-    .project-picture {
+    .project-image {
+      img {
+        width: 450px;
+        height: 250px;
+      }
       :hover {
         /* background: black; */
         /* box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); */
         /* transform: translateY(-5px); */
       }
-      position: absolute;
-      width: 60%;
-      height: 400px;
     }
     /* grid-template-areas:
       "img img img info info"
@@ -161,13 +164,13 @@ export class HomePage extends Component {
             {projects.map(project => {
               return (
                 <div className="project-container">
-                  {/* <img src={project.gif_link} alt={project.name} /> */}
-                  {/* UNCOMMENT THIS WHEN READY TO OVERLAP */}
-                  <img
-                    className="project-picture"
-                    src={project.gif_link}
-                    alt={project.name}
-                  />
+                  <div className="project-image">
+                    <img
+                      className="project-picture"
+                      src={project.gif_link}
+                      alt={project.name}
+                    />
+                  </div>
                   {/* <div className="project-about">
                     <div className="about-heading">
                       <h1>{project.name}</h1>
