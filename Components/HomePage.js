@@ -3,6 +3,7 @@ import styled from "styled-components";
 import * as logos from "../assets/logos";
 import projects from "../assets/projects.json";
 import { Fade, Zoom } from "react-reveal";
+import logoreturner from "../assets/logosswitch";
 
 const HomeContainer = styled.div`
   background: ${props => props.theme.babypowder};
@@ -108,6 +109,9 @@ const WorksContainer = styled.div`
 
 //Working on it
 export class HomePage extends Component {
+  constructor() {
+    super();
+  }
   render() {
     return (
       <>
@@ -162,8 +166,9 @@ export class HomePage extends Component {
         <WorksContainer id="projects">
           <Zoom top cascade>
             {projects.map(project => {
+              console.log(project);
               return (
-                <div className="project-container">
+                <div className="project-container" key={project.name}>
                   <div className="project-image">
                     <img
                       className="project-picture"
@@ -172,7 +177,18 @@ export class HomePage extends Component {
                     />
                   </div>
                   <div className="project-details">
-                    <p>{project.description}</p>
+                    <div className="project-heading">
+                      <h1>{project.name}</h1>
+                    </div>
+                    <div className="project-description">
+                      <p>{project.description}</p>
+                    </div>
+                    {project.logos && (
+                      <div className="project-icons">
+                        <h1>THERE ARE LOGOS</h1>
+                        {project.logos.map(item => logoreturner(item))}
+                      </div>
+                    )}
                   </div>
                   {/* <div className="project-about">
                     <div className="about-heading">

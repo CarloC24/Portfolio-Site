@@ -4,7 +4,8 @@
     "description": "A Simple Business Searching/Reviewer Site that you can log in and do a CRUD operation on reviews of your favorite businesses.Everybody can add a store in the and comment their experiences on it. React for the frontend.PostgreSQL & NodeJS on the Backend",
     "project_link": "http://bonafind.biz",
     "github_link": "https://github.com/Lambda-School-Labs/labs9-business-reviews",
-    "gif_link": "../static/BonafindGif.gif"
+    "gif_link": "../static/BonafindGif.gif",
+    "logos": ["www"]
   },
   {
     "name": "Pair Me",
