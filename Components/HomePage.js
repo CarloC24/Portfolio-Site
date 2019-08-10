@@ -171,6 +171,9 @@ export class HomePage extends Component {
                       alt={project.name}
                     />
                   </div>
+                  <div className="project-details">
+                    <p>{project.description}</p>
+                  </div>
                   {/* <div className="project-about">
                     <div className="about-heading">
                       <h1>{project.name}</h1>
