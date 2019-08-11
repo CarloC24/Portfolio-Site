@@ -283,12 +283,22 @@ export const javascript_logo = () => {
   );
 };
 
-export const linkedIn_logo = () => {
-  return <img src="https://img.icons8.com/color/48/000000/linkedin.png" />;
+export const linkedIn_logo = (link = "") => {
+  return (
+    <img
+      src="https://img.icons8.com/color/48/000000/linkedin.png"
+      href={link}
+    />
+  );
 };
 
-export const github_logo = () => {
-  return <img src="https://img.icons8.com/clouds/100/000000/github.png" />;
+export const github_logo = (link = "") => {
+  return (
+    <img
+      src="https://img.icons8.com/clouds/100/000000/github.png"
+      href={link}
+    />
+  );
 };
 
 export const prisma_logo = () => {
@@ -386,9 +396,12 @@ export const apollo_logo = () => {
     />
   );
 };
-export const www_logo = () => {
+export const www_logo = (link = "") => {
   return (
-    <img src="https://cdn0.iconfinder.com/data/icons/marketing-essential/48/v-12-512.png" />
+    <img
+      src="https://cdn0.iconfinder.com/data/icons/marketing-essential/48/v-12-512.png"
+      href={link}
+    />
   );
 };
 
@@ -396,6 +409,17 @@ export const email_logo = () => {
   return <img src="https://image.flaticon.com/icons/png/512/732/732200.png" />;
 };
 
-export const resume_logo = () => {
-  return <img src="https://image.flaticon.com/icons/svg/1102/1102457.svg" />;
+export const resume_logo = (link = "") => {
+  return (
+    <img
+      src="https://image.flaticon.com/icons/svg/1102/1102457.svg"
+      href={link}
+    />
+  );
+};
+
+// add PUGJS, REPLACE REACT LOGO
+
+export const pugjs_logo = () => {
+  return <img src="../static/pugjs.png" />;
 };

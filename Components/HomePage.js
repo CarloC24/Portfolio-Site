@@ -116,6 +116,11 @@ const WorksContainer = styled.div`
     height: 50px;
     width: 50px;
   }
+  .stack-icons svg,
+  .stack-icons img {
+    height: 50px;
+    width: 50px;
+  }
 `;
 
 //Working on it
@@ -171,6 +176,7 @@ export class HomePage extends Component {
               <div className="stack-box">{logos.javascript_logo()}</div>
               <div className="stack-box">{logos.python_logo()}</div>
               <div className="stack-box">{logos.c_logo()}</div>
+              <div className="stack-box">{logos.pugjs_logo()}</div>
             </div>
           </Zoom>
         </StacksContainer>
@@ -190,6 +196,9 @@ export class HomePage extends Component {
                   <div className="project-details">
                     <div className="project-heading">
                       <h1>{project.name}</h1>
+                    </div>
+                    <div className="stack-icons">
+                      {project.logos.map(item => logoreturner(item))}
                     </div>
                     <div className="project-description">
                       <p>{project.description}</p>
