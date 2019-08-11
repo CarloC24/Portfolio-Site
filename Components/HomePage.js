@@ -79,20 +79,25 @@ const WorksContainer = styled.div`
   align-items: center;
   /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
-    height: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* height: 400px; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s all;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    background: white;
+    /* background: black; */
     width: 90%;
     margin: 20px;
     /*  put this in the picture clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
     padding-bottom: 20px;
     .project-image {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      height: 100%;
       img {
         width: 450px;
-        height: 250px;
+        height: 100%;
+        /* height: 350px; */
       }
       :hover {
         /* background: black; */
@@ -100,10 +105,16 @@ const WorksContainer = styled.div`
         /* transform: translateY(-5px); */
       }
     }
-    /* grid-template-areas:
-      "img img img info info"
-      "img img img info info"
-      "logo logo logo info  info"; */
+    .project-details {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+  .project-icons svg,
+  .project-icons img {
+    height: 50px;
+    width: 50px;
   }
 `;
 
@@ -185,7 +196,6 @@ export class HomePage extends Component {
                     </div>
                     {project.logos && (
                       <div className="project-icons">
-                        <h1>THERE ARE LOGOS</h1>
                         {project.logos.map(item => logoreturner(item))}
                       </div>
                     )}
