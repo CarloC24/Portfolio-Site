@@ -81,7 +81,7 @@ const WorksContainer = styled.div`
   align-items: center;
   /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
-    height: 800px;
+    height: 700px;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s all;
     display: grid;
