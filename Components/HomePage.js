@@ -73,25 +73,26 @@ const StacksContainer = styled.div`
 const WorksContainer = styled.div`
   /* background: #353b3f; */
   font-family: "Roboto";
-  height: 100%;
-  margin-top: 10px;
+  height: 100px;
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
   /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
-    height: 700px;
+    /* height: 700px; */
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s all;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
     /* background: black; */
     width: 90%;
     /* height: 20px; */
     /* margin: 20px; */
     /*  put this in the picture clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
-    padding-bottom: 20px;
     .project-image {
       display: grid;
       justify-items: center;
@@ -99,7 +100,7 @@ const WorksContainer = styled.div`
       height: 100%;
       img {
         width: 90%;
-        height: 100%;
+        /* height: 100%; */
         /* height: 350px; */
       }
       :hover {
@@ -110,6 +111,7 @@ const WorksContainer = styled.div`
     }
     .project-details {
       display: grid;
+      width: 90%;
       justify-items: center;
       align-items: center;
       .project-description {
