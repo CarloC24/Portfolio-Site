@@ -72,6 +72,7 @@ const StacksContainer = styled.div`
 `;
 const WorksContainer = styled.div`
   /* background: #353b3f; */
+  font-family: "Roboto";
   height: 100%;
   margin-top: 10px;
   display: grid;
@@ -109,17 +110,35 @@ const WorksContainer = styled.div`
       display: grid;
       justify-items: center;
       align-items: center;
+      .project-description {
+        margin: 10px;
+        text-align: center;
+        word-break: break-word;
+        line-height: 1.3;
+      }
     }
   }
   .project-icons svg,
   .project-icons img {
     height: 50px;
     width: 50px;
+    margin: 8px;
+    transition: 0.2s all;
+  }
+  .project-icons svg:hover,
+  .project-icons img:hover {
+    transform: translateY(-5px);
   }
   .stack-icons svg,
   .stack-icons img {
     height: 50px;
     width: 50px;
+    margin: 8px;
+    transition: 0.2s all;
+  }
+  .stack-icons svg:hover,
+  .stack-icons img:hover {
+    transform: translateY(-5px);
   }
   hr {
     width: 350px;
