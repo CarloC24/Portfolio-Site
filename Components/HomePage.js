@@ -121,6 +121,9 @@ const WorksContainer = styled.div`
     height: 50px;
     width: 50px;
   }
+  hr {
+    width: 350px;
+  }
 `;
 
 //Working on it
@@ -131,16 +134,14 @@ export class HomePage extends Component {
   render() {
     return (
       <>
-        <HomeContainer>
-          {/* Change Layout?? */}
-          {/* UNCOMMENT IMAGE WHEN READY TO SHOW */}
-          {/* <img
+        {/* <HomeContainer>
+          <img
             src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
             alt="mypicture"
             height="200px"
             width="200px"
             className="home_img__image"
-          /> */}
+          />
           <Fade top cascade>
             <div className="about-header">
               <h1>Hi! I am Carlo, Nice to meet you</h1>
@@ -179,11 +180,10 @@ export class HomePage extends Component {
               <div className="stack-box">{logos.pugjs_logo()}</div>
             </div>
           </Zoom>
-        </StacksContainer>
+        </StacksContainer> */}
         <WorksContainer id="projects">
           <Zoom top cascade>
             {projects.map(project => {
-              console.log(project);
               return (
                 <div className="project-container" key={project.name}>
                   <div className="project-image">
@@ -197,15 +197,32 @@ export class HomePage extends Component {
                     <div className="project-heading">
                       <h1>{project.name}</h1>
                     </div>
-                    <div className="stack-icons">
+                    {/* <div className="stack-icons">
                       {project.logos.map(item => logoreturner(item))}
-                    </div>
+                    </div> */}
+                    <hr />
                     <div className="project-description">
                       <p>{project.description}</p>
                     </div>
                     {project.logos && (
                       <div className="project-icons">
-                        {project.logos.map(item => logoreturner(item))}
+                        {project.logos.map(item => {
+                          if (item == "github" && project.github_link) {
+                            return (
+                              <a href={project.github_link} target="_blank">
+                                {logoreturner(item, project.github_link)}
+                              </a>
+                            );
+                          } else if (item == "www" && project.project_link) {
+                            return (
+                              <a href={project.github_link} target="_blank">
+                                {logoreturner(item, project.project_link)}
+                              </a>
+                            );
+                          } else {
+                            return logoreturner(item);
+                          }
+                        })}
                       </div>
                     )}
                   </div>

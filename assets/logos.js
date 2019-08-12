@@ -397,6 +397,7 @@ export const apollo_logo = () => {
   );
 };
 export const www_logo = (link = "") => {
+  console.log(link);
   return (
     <img
       src="https://cdn0.iconfinder.com/data/icons/marketing-essential/48/v-12-512.png"
