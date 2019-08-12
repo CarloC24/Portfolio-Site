@@ -76,18 +76,20 @@ const WorksContainer = styled.div`
   height: 100%;
   margin-top: 10px;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-items: center;
   align-items: center;
   /* changing to single card layout! grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); */
   .project-container {
-    /* height: 400px; */
+    height: 800px;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s all;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     /* background: black; */
     width: 90%;
-    margin: 20px;
+    /* height: 20px; */
+    /* margin: 20px; */
     /*  put this in the picture clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
     padding-bottom: 20px;
     .project-image {
@@ -96,7 +98,7 @@ const WorksContainer = styled.div`
       align-items: center;
       height: 100%;
       img {
-        width: 450px;
+        width: 90%;
         height: 100%;
         /* height: 350px; */
       }
@@ -141,7 +143,7 @@ const WorksContainer = styled.div`
     transform: translateY(-5px);
   }
   hr {
-    width: 350px;
+    width: 90%;
   }
 `;
 
