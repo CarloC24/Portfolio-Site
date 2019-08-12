@@ -134,7 +134,7 @@ export class HomePage extends Component {
   render() {
     return (
       <>
-        {/* <HomeContainer>
+        <HomeContainer>
           <img
             src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
             alt="mypicture"
@@ -180,7 +180,7 @@ export class HomePage extends Component {
               <div className="stack-box">{logos.pugjs_logo()}</div>
             </div>
           </Zoom>
-        </StacksContainer> */}
+        </StacksContainer>
         <WorksContainer id="projects">
           <Zoom top cascade>
             {projects.map(project => {
@@ -197,9 +197,9 @@ export class HomePage extends Component {
                     <div className="project-heading">
                       <h1>{project.name}</h1>
                     </div>
-                    {/* <div className="stack-icons">
-                      {project.logos.map(item => logoreturner(item))}
-                    </div> */}
+                    <div className="stack-icons">
+                      {project.stack_logos.map(item => logoreturner(item))}
+                    </div>
                     <hr />
                     <div className="project-description">
                       <p>{project.description}</p>

@@ -5,6 +5,7 @@
     "project_link": "http://bonafind.biz",
     "github_link": "https://github.com/Lambda-School-Labs/labs9-business-reviews",
     "gif_link": "../static/BonafindGif.gif",
+    "stack_logos": ["react", "postgres", "node"],
     "logos": ["www", "github"]
   },
   {
@@ -13,6 +14,7 @@
     "project_link": "https://pair-me.netlify.com",
     "github_link": "https://github.com/pairme",
     "gif_link": "../static/pairme.gif",
+    "stack_logos": ["react", "node", "socketio"],
     "logos": ["www", "github"]
   },
   {
@@ -20,6 +22,15 @@
     "description": "A feature-rich online shopping store where you can sell buy & sell items. Has a very simple receipt/permissions section. React with Server side rendering and  Apollo for the frontend. NodeJS, Graphql-yoga and Prisma on the backend. ",
     "project_link": "https://frontend.carloclamucha.now.sh/",
     "gif_link": "../static/SickFits.gif",
+    "stack_logos": [
+      "react",
+      "nextjs",
+      "apollo",
+      "node",
+      "prisma",
+      "mysql",
+      "graphql"
+    ],
     "logos": ["www"]
   },
   {
@@ -27,6 +38,7 @@
     "description": "A feature-rich NodeJS application that lets you post a store and get reviews on it!. It can display all the reviewed stores in a static map and show where the store is located in the world! Made in PugJS templating language for the View. MongoDB and Express is used on the backend",
     "project_link": "http://192.241.146.61/",
     "gif_link": "../static/NWD.gif",
+    "stack_logos": ["node", "pug", "passportjs", "mongo"],
     "logos": ["www"]
   },
   {
@@ -35,6 +47,7 @@
     "project_link": "https://bw-foodie-fun.github.io/UI-JT/",
     "github_link": "https://github.com/bw-foodie-fun",
     "gif_link": "../static/FoodieFun.gif",
+    "stack_logos": ["react", "postgres", "node"],
     "logos": ["www", "github"]
   }
 ]

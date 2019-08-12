@@ -14,12 +14,27 @@ export default function(logo, link = "") {
       return logos.vue_logo();
     case "node":
       return logos.nodejs_logo();
-    case "ostgres":
+    case "postgres":
       return logos.sql_logo();
     case "mongo":
       return logos.mongodb_logo();
-
+    case "pug":
+      return logos.pugjs_logo();
+    case "passportjs":
+      return logos.passportjs_logo();
+    case "mysql":
+      return logos.mysql_logo();
+    case "socketio":
+      return logos.socketio_logo();
+    case "prisma":
+      return logos.prisma_logo();
+    case "nextjs":
+      return logos.nextjs_logo();
+    case "apollo":
+      return logos.apollo_logo();
+    case "graphql":
+      return logos.graphql_logo();
     default:
-      return "No logo found!!";
+      return <p>[{logo}]</p>;
   }
 }
