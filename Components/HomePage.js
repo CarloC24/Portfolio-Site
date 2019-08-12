@@ -157,53 +157,6 @@ export class HomePage extends Component {
   render() {
     return (
       <>
-        <HomeContainer>
-          <img
-            src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
-            alt="mypicture"
-            height="200px"
-            width="200px"
-            className="home_img__image"
-          />
-          <Fade top cascade>
-            <div className="about-header">
-              <h1>Hi! I am Carlo, Nice to meet you</h1>
-            </div>
-            <div className="textcontainer">
-              <p>
-                I am a texas based web developer / software developer looking
-                for a job in web development / software development / fullstack
-                role with a great company. Check out my projects down below and
-                Feel free to reach out at any of my links.{" "}
-              </p>
-            </div>
-          </Fade>
-        </HomeContainer>
-        <StacksContainer>
-          <div className="stacks-heading">
-            <h1>Technologies that I've studied or worked on</h1>
-          </div>
-          <Zoom top cascade>
-            <div className="stacks-logos">
-              <div className="stack-box">{logos.html_logo()}</div>
-              <div className="stack-box">{logos.css_logo()}</div>
-              <div className="stack-box">{logos.less_logo()}</div>
-              <div className="stack-box">{logos.react_logo()}</div>
-              <div className="stack-box">{logos.apollo_logo()}</div>
-              <div className="stack-box">{logos.redux_logo()}</div>
-              <div className="stack-box">{logos.vue_logo()}</div>
-              <div className="stack-box">{logos.nodejs_logo()}</div>
-              <div className="stack-box">{logos.sql_logo()}</div>
-              <div className="stack-box">{logos.prisma_logo()}</div>
-              <div className="stack-box">{logos.mongodb_logo()}</div>
-              <div className="stack-box">{logos.django_logo()}</div>
-              <div className="stack-box">{logos.javascript_logo()}</div>
-              <div className="stack-box">{logos.python_logo()}</div>
-              <div className="stack-box">{logos.c_logo()}</div>
-              <div className="stack-box">{logos.pugjs_logo()}</div>
-            </div>
-          </Zoom>
-        </StacksContainer>
         <WorksContainer id="projects">
           <Zoom top cascade>
             {projects.map(project => {
@@ -270,6 +223,53 @@ export class HomePage extends Component {
             })}
           </Zoom>
         </WorksContainer>
+        {/* <HomeContainer>
+          <img
+            src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
+            alt="mypicture"
+            height="200px"
+            width="200px"
+            className="home_img__image"
+          />
+          <Fade top cascade>
+            <div className="about-header">
+              <h1>Hi! I am Carlo, Nice to meet you</h1>
+            </div>
+            <div className="textcontainer">
+              <p>
+                I am a texas based web developer / software developer looking
+                for a job in web development / software development / fullstack
+                role with a great company. Check out my projects down below and
+                Feel free to reach out at any of my links.{" "}
+              </p>
+            </div>
+          </Fade>
+        </HomeContainer>
+        <StacksContainer>
+          <div className="stacks-heading">
+            <h1>Technologies that I've studied or worked on</h1>
+          </div>
+          <Zoom top cascade>
+            <div className="stacks-logos">
+              <div className="stack-box">{logos.html_logo()}</div>
+              <div className="stack-box">{logos.css_logo()}</div>
+              <div className="stack-box">{logos.less_logo()}</div>
+              <div className="stack-box">{logos.react_logo()}</div>
+              <div className="stack-box">{logos.apollo_logo()}</div>
+              <div className="stack-box">{logos.redux_logo()}</div>
+              <div className="stack-box">{logos.vue_logo()}</div>
+              <div className="stack-box">{logos.nodejs_logo()}</div>
+              <div className="stack-box">{logos.sql_logo()}</div>
+              <div className="stack-box">{logos.prisma_logo()}</div>
+              <div className="stack-box">{logos.mongodb_logo()}</div>
+              <div className="stack-box">{logos.django_logo()}</div>
+              <div className="stack-box">{logos.javascript_logo()}</div>
+              <div className="stack-box">{logos.python_logo()}</div>
+              <div className="stack-box">{logos.c_logo()}</div>
+              <div className="stack-box">{logos.pugjs_logo()}</div>
+            </div>
+          </Zoom>
+        </StacksContainer> */}
       </>
     );
   }

@@ -10,19 +10,36 @@ import { Rotate, Fade } from "react-reveal";
 
 const Appbar = styled.div`
   display: grid;
-  grid-template-areas: "logo logo empty empty empty empty empty empty linkedin github resume";
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: center;
+  align-items: center;
+  opacity: 0.8;
+  background-color: #63b4d1;
+  /* grid-template-areas: "logo logo empty empty empty empty empty empty linkedin github resume"; */
   grid-gap: 5px;
-  .navbar-heading {
-    grid-area: logo;
-  }
   .navbar-linkedin {
-    grid-area: linkedin;
+    /* grid-area: linkedin; */
+    grid-column: 8;
   }
   .navbar-github {
-    grid-area: github;
+    /* grid-area: github; */
+    grid-column: 9;
+  }
+  img {
+    width: 50px;
+    height: 50px;
   }
   .navbar-resume {
-    grid-area: resume;
+    grid-column: 10;
+    img {
+      width: 35px;
+      height: 50px;
+    }
+  }
+  .navbar-heading {
+    padding: 0px 10px;
+    width: 100px;
+    height: 83px;
   }
 `;
 
@@ -67,10 +84,28 @@ export class Navbar extends Component {
   render() {
     return (
       <Appbar>
-        <h1 className="navbar-heading">START HERE</h1>
-        <h1 className="navbar-linkedin">LinkedIn</h1>
-        <h1 className="navbar-github">Github</h1>
-        <h1 className="navbar-resume">Resume</h1>
+        <img className="navbar-heading" src="../static/other_logo.png" />
+        <a
+          className="navbar-linkedin"
+          href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
+          target="_blank"
+        >
+          {linkedIn_logo()}
+        </a>
+        <a
+          className="navbar-github"
+          href="https://github.com/CarloC24"
+          target="_blank"
+        >
+          {github_logo()}
+        </a>
+        <a
+          className="navbar-resume"
+          href="https://resume.creddle.io/resume/fwoe7ya3wlk"
+          target="_blank"
+        >
+          {resume_logo()}
+        </a>
       </Appbar>
     );
   }
