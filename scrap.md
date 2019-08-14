@@ -367,6 +367,9 @@ Michael - David
 AJ - Joel
 Thomas - Kawsar
 
-```
 
+
+```
+aws notes
+terraform
 ```
