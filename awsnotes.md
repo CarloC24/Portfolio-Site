@@ -172,13 +172,31 @@ Versioning Exam Tips
 > Versioning's MFA Delete Capabilitty, which muli-factor authentication, can be used to providde an additional layer of security.
 
 S3 Lifecycle Management(Lab)
+
 > Manage it through the Management Tab
 > Then create the lifecycle methods
 
 Lifecycle Management Exam Tips
+
 > Automates moving your objects between the different storage tiers
 > Can be used in conjunction with versioning
 > Can be applied to current versions and previous versions.
 
 Cross Region Replication
-> 
+
+> Go to Management and Replication
+> Enable versioning if not enabled.
+> If you try to add something on the parent bucket it will replicate the item to the cross regioned bucket
+> Will not replicate delete markers!!!
+> Replicates items in buckets.
+
+Cross Region Replication Exam Tips
+
+> Versioning must be enabled on both the source and destination buckets.
+> Regions must be unique
+> Files in an existing bucket are not replicated automatically
+
+Transfer Acceleration
+
+> Users from all around the world can transfer data in S3 much faster
+> Users will upload to edge locations then edge locations will upload it using amazons backbone network
