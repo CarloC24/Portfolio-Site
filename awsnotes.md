@@ -200,3 +200,23 @@ Transfer Acceleration
 
 > Users from all around the world can transfer data in S3 much faster
 > Users will upload to edge locations then edge locations will upload it using amazons backbone network
+
+CloudFront Overview
+
+> Cloudfront is a CDN (Content Delivery Network)
+> CDN (Content Delivery Network) - A system of distributed servers that deliver wepages and other web content to a user based on the geographic locations of the user, the origin of the webpage, and a content delivery server.
+
+CloudFront Terminology
+
+> Edge Location - This is the location where content will be cached. This is seperate to an AWS Region/ Availability Zone.
+> Origin - This is the origin of all the files that the CDN will distribute. This can be an S3 Bucket, an EC2 Instance, an Elastic Load Balancer, or Route53.
+> Distribution - This is the name given to the CDN which consists of a collection of Edge Locations
+
+CloudFront more Overview
+
+> When a user requests content the edge location will cache it for 48/72 hours depending on the server. So when people try to look for the same content they can pull it faster plus the edge location can pull the data using Amazon's backbone network.
+> Amazon CloudFront can be used to deliver your entire website, including dynamic, static, streaming, and interactive content using a global network of edge locations. Requests for your content are automatically routed to the nearest edge location, so content is delivered with the best possible performance.
+> There are two kinds of distribution. Web Distribution and RTMP (Used for Media Streaming).
+> Edge locations are not just READ only. You can write to them too.
+> Objects are cached for the life of the TTL (Time to Live).
+> You can clear cached objects, but you will be charged.
