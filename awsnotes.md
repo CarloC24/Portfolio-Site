@@ -134,3 +134,51 @@ S3 Security and Encryption
 
 > By Default buckets are private by default
 > Can be set by Bucket Policies(bucket by a whole) & Access Control Lists(can go into a file)
+> S3 buckets can be configured to create access logs which log all requests made to the S3 bucket.
+> It can be sent to a another bucket andd even another bucket in a another account
+
+Encryption in Transit is achieved by
+
+> SSL / TLS (HTTPS)
+
+Encryption at Rest (Server Side) is achieved by
+
+> S3 Managed Keys - SSE - S3 (Server Side Encryption S3)
+> AWS Key Management Service, Managed Keys - SSE - KMS
+> Server Side Encryption With Customer Provided Keys - SSE - C
+> Client Side Encryption (you encrypt the object then send it to S3)
+
+Using Versioning with S3
+
+> Stores all Versions of an object (including all writes and even if you delete an object)
+> Great backup tool
+> Once enabled, Versioning cannot be disabled, only suspendded
+> Integrates with Lifecycle rules
+> Versioning's MFA Delete capability, which uses multi-facor authentication, can be used to provide an additional layer of security
+
+Exercise
+
+> Create a new bucket
+> Enable Versioning
+> And you can access versions with th version tab
+
+Versioning Exam Tips
+
+> Versioning Stores all the versions of a object so you dont overwrite them
+> Versioning puts delete markers on the items
+> You can delete items by showing all the versions
+> A great backup tool
+> Integrates with Lifecycle Rules
+> Versioning's MFA Delete Capabilitty, which muli-factor authentication, can be used to providde an additional layer of security.
+
+S3 Lifecycle Management(Lab)
+> Manage it through the Management Tab
+> Then create the lifecycle methods
+
+Lifecycle Management Exam Tips
+> Automates moving your objects between the different storage tiers
+> Can be used in conjunction with versioning
+> Can be applied to current versions and previous versions.
+
+Cross Region Replication
+> 
