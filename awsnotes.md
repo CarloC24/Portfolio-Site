@@ -220,3 +220,36 @@ CloudFront more Overview
 > Edge locations are not just READ only. You can write to them too.
 > Objects are cached for the life of the TTL (Time to Live).
 > You can clear cached objects, but you will be charged.
+
+CloudFront Lab
+
+> CloudFront is Under Distribution Service
+> Create a Distribution then Click Web
+> There you will select a bucket as a origin domain name
+> CloudFront will be accessed using <cloudfrontdomain name>/<iteminthebucket>
+> EXAMPLE d3blv6rv451urx.cloudfront.net/carlo-test.jpg
+> You can set up a CloudFront File Invalidation in the settings.
+> Basically it will invalidate the cached file in the edge location and fetch it from the origin.
+
+CloudFront Exam Tips
+
+> Edge Location - This is the location where content will be cached.
+> Origin - This is the origin of all the files the CDN will distribute. Can either be an S3 Bucket, an EC2 Instance, an Elastic Load Balancer, or Route53.
+> DIistribution - This is the name given the CDN which consists of a collection of Edge Locations.
+> Web Distribution - Typically usedd for Websites.L0
+> RTMP - For Adobe Flash and Media Streaming.
+> Edge Locations are not just Read Only - You can Write on them too.
+> Objects are cached for the life of the TTL
+> You can invalidate cached objects, but you will be charged.
+
+Snowball Overview
+
+> Snowballs are a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of AWS.
+> Using Snowball addresses common challenges with large-scale data transfers including high network costs, long transfer times, and security concerns.
+> Transferring data with Snowball is simple, fast, secure, and can be as little as one-fifth the cost of high-speed internet
+> Snowball comes in either 50TB or 80TB size.
+> Snowball uses multiple layers of security designed to protect your data including tamper-resistant enclosures, 256-bit encryption, and an industry-standard Trusted Platform Module (TPM) designed to ensure both security and full chain-of-custody of your data.
+> Once the data transfer job has been processed and verified, AWS performs a software erasure of the Snowball Appliance.
+> AWS Snowball Edge is a 100TB data transfer device with on-board storage and compute capabilities (AWS LAMBDA FUNCTIONS). You can use Snowball Edge to move large amounts of data into and out of AWS, as a temporary storage tier for large local datasets, or to support local workloads in remote or offline locations.
+> Snowball Edge connects to your existing applications and infrastructure using standard storage interfaces, streamlining the data transfer process and minimizing setup and integration.
+> Snowball Edge can cluster together to form a local storage tier andd process your data on-premises, helping ensure your applications continue tot run even when they are not able to access the cloud.
