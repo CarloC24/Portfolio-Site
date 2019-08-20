@@ -253,3 +253,56 @@ Snowball Overview
 > AWS Snowball Edge is a 100TB data transfer device with on-board storage and compute capabilities (AWS LAMBDA FUNCTIONS). You can use Snowball Edge to move large amounts of data into and out of AWS, as a temporary storage tier for large local datasets, or to support local workloads in remote or offline locations.
 > Snowball Edge connects to your existing applications and infrastructure using standard storage interfaces, streamlining the data transfer process and minimizing setup and integration.
 > Snowball Edge can cluster together to form a local storage tier andd process your data on-premises, helping ensure your applications continue tot run even when they are not able to access the cloud.
+> AWS Snowmobile is a Exabyte-scale data transfer service used to move extremely large amounts of data to AWS.
+> You can transer up 100PB per Snowmobile, a 45-foot long ruggedized shipping container, pulled by a semi-trailer truck. Snowmobile makes it easy to move massive volumes of data to the cloud, including video libraries, image repositories, or even a complete data center migration. Transferring data with Snowmobile is secure, fast, and cost effective.
+
+Snowball Exam Tips
+
+> Snowball and import and export from S3
+
+Storage Gateway
+
+> AWS Storage Gateway is a service that connects an on-premises software appliance with cloud-based storage to provided seamless and secure integration between an organization's on-premises IT enviorment and AWS's storage infrastructure. The service enables you to securely store data to the AWS cloud for scalable and cost-effective storage.
+> AWS Storage Gateway is a physical or virtual device that will replicate items into a AWS Storage Space.
+> AWS Storage Gateway is available as a virtual machine image that you install on a host in your data center.
+> Storage Gateway supports either VMware ESXi or Microsoft Hyper-V.
+> Once you've installed your gateway and associated it with your AWS account through the activation process, you can use the AWS Management Console to create the storage gateway option that is right for you!
+> Storage Gateways have Three different types
+
+1. File Gateway(NFS & SMB) - Used for storing files.
+   > Files are stored as Objects in your S3 Bucket accessed thorugh a Network File System (NFS).
+   > Ownership, permissions, and timestamps are durably storedd in S3 in the user-metadata of the object associated with the file.
+   > Once objects are transferred to S3, they can be managed as native S3 objects, and bucket policies such as versioning, lifecycle management, andd cross-region replication apply directly to objects stored in your bucket.
+2. Volume Gateway (iSCSI) - Used to store copies of hard drives. (Stored Volumes & Cached Volumes)
+   > The volume interface presents your applications with disk volumes using the iSCSI block protocol.
+   > Data written to these volumes can be asynchronously backed up as point-in-time snapshots of your volumes, and stored in the cloud as Amazon EBS snapshots.
+   > Snapshots are incremental backups that capture only changed blocks. All snapshot storage is also compressed to minimize your storage charges.
+   > Types of Volume Gateway
+   > (Stored Volumes)
+   > Stored Volumes let you store your primary data locally, while asynchronously backing up that data to AWS.
+   > Stored Volumes provide your on-premises applications with low-latency access to their entire datasets, while providing durable, off-site backups.
+   > You can create storage volumes and mount them as iSCSI devices from your on-premises application servers.
+   > Data written to your stored volumes is stored on your on-premises storage hardware. This data is asynchronously backed up to Amazon Simple Storage Service (Amazon S3) in the form of Amazon Elastic Block Store (Amazon EBS) snapshots. 1GB - 1TB in size for Stored Volumes.
+   > ( Cached Volumes )
+   > Cached Volumes let you Amazon Simple Storage Service (S3) as your primary data storage while retaining frequently accessed data locally in your storage gateway.
+   > Cached Volumes minimized the need to scale your on-premise storage infrastructure, while still providing your applications with low-latency access to their frequently accessed data.
+   > You can create storage volumes up to 32 TB in size and attach them as iSCSI devices from your on-premises application servers.
+   > Your gateway stores data that you write to the volumes in Amazon S3 and retains recently read data in your on-premises storage gateway's cache and uploadd buffer storage. 1GB - 32TB in size for Cached Volumes.
+3. Tape Gateway (VTL Virtual Tape Library)
+   > Tape Gateway offers a durable, cost effective solution to archive your data in the AWS Cloud.
+   > The VTL interface it provides lets you leverage your existing tape-basedd backup application infrastructure to store data on virtual tape cartridges that your create on your tape gateway.
+   > Each tape gateway is preconfigured with a media changer and tape drives, which are available to your exisiting client backup applications as iSCSI devices.
+   > You add tape cartridges as you need archive your data. Supported by NetBackup, Backup Exec, Veeam etc.
+
+Exam Tips Storage Gateway
+
+> File Gateway - For flat files stored directly on S3
+> Volume Gateway - Stored Volumes - Entire Dataset is Stored on site and is asyncronously backed up to S3. Cached Volumes - Dataset is stored in S3 and most frequently accessed data is cached on site.
+> Gateway Virtual Tape Library
+
+Summarization of S3 & IAM
+Identity Access Management Consists of The Following:
+1. Users
+2. Groups
+3. Roles
+4. Policies
