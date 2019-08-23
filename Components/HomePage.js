@@ -171,7 +171,7 @@ export class HomePage extends Component {
                   </div>
                   <div className="project-details">
                     <div className="project-heading">
-                      <h2>{project.name}</h2>
+                      <h1>{project.name}</h1>
                     </div>
                     <div className="stack-icons">
                       {project.stack_logos.map(item => logoreturner(item))}

@@ -45,12 +45,19 @@ class MyApp extends App {
           href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
           rel="stylesheet"
         />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Carlo Clamucha's portfolio website!" />
-        <meta property="og:description" content="My own portfolio website built in NextJS and React" />
-        <meta property="og:url" content="https://carlo-clamucha.me" />
-        <meta property="og:site_name" content="Carlo Clamucha's portfolio website" />
+        <link rel="icon" type="image/x-icon" href="../static/other_logo.png" />
+        <title>Carlo Clamucha's portfolio website!</title>
+        <meta property="locale" content="en_US" />
+        <meta property="type" content="website" />
+        <meta
+          property="description"
+          content="My own portfolio website built in NextJS and React"
+        />
+        <meta property="url" content="https://carlo-clamucha.me" />
+        <meta
+          property="site_name"
+          content="Carlo Clamucha's portfolio website"
+        />
       </Head>
     );
   }
