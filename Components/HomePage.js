@@ -85,7 +85,7 @@ const WorksContainer = styled.div`
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s all;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 350px;
     justify-items: center;
     align-items: center;
     /* background: black; */
@@ -97,7 +97,7 @@ const WorksContainer = styled.div`
       display: grid;
       justify-items: center;
       align-items: center;
-      height: 100%;
+      /* height: 100%; */
       img {
         width: 90%;
         /* height: 100%; */
@@ -115,7 +115,7 @@ const WorksContainer = styled.div`
       justify-items: center;
       align-items: center;
       .project-description {
-        margin: 10px;
+        /* margin: 10px; */
         text-align: center;
         word-break: break-word;
         line-height: 1.3;
@@ -153,56 +153,80 @@ const WorksContainer = styled.div`
 export class HomePage extends Component {
   constructor() {
     super();
+    this.state = {
+      count: 0
+    };
   }
+  nextPage = e => {
+    let nextIndex = this.state.count + 1;
+    if (projects.length === nextIndex) {
+      nextIndex = 0;
+    }
+    this.setState({ count: nextIndex });
+  };
+  prevPage = e => {
+    let nextIndex = this.state.count - 1;
+    if (0 > nextIndex) {
+      nextIndex = projects.length - 1;
+    }
+    this.setState({
+      count: nextIndex
+    });
+  };
   render() {
+    let { count } = this.state;
+    console.log(count);
     return (
       <>
         <WorksContainer id="projects">
           <Zoom top cascade>
-            {projects.map(project => {
-              return (
-                <div className="project-container" key={project.name}>
-                  <div className="project-image">
-                    <img
-                      className="project-picture"
-                      src={project.gif_link}
-                      alt={project.name}
-                    />
+            {/* <button onClick={this.nextPage}>Next</button>
+            <button onClick={this.prevPage}>Prev</button> */}
+            <div className="project-container" key={projects[count].name}>
+              <div className="project-image">
+                <img
+                  className="project-picture"
+                  src={projects[count].gif_link}
+                  alt={projects[count].name}
+                />
+              </div>
+              <div className="project-details">
+                <div className="project-heading">
+                  <h1>{projects[count].name}</h1>
+                </div>
+                <div className="stack-icons">
+                  {projects[count].stack_logos.map(item => logoreturner(item))}
+                </div>
+                <hr />
+                <div className="project-description">
+                  <p>{projects[count].description}</p>
+                </div>
+                {projects[count].logos && (
+                  <div className="project-icons">
+                    {projects[count].logos.map(item => {
+                      if (item == "github" && projects[count].github_link) {
+                        return (
+                          <a href={projects[count].github_link} target="_blank">
+                            {logoreturner(item, projects[count].github_link)}
+                          </a>
+                        );
+                      } else if (
+                        item == "www" &&
+                        projects[count].project_link
+                      ) {
+                        return (
+                          <a href={projects[count].github_link} target="_blank">
+                            {logoreturner(item, projects[count].project_link)}
+                          </a>
+                        );
+                      } else {
+                        return logoreturner(item);
+                      }
+                    })}
                   </div>
-                  <div className="project-details">
-                    <div className="project-heading">
-                      <h1>{project.name}</h1>
-                    </div>
-                    <div className="stack-icons">
-                      {project.stack_logos.map(item => logoreturner(item))}
-                    </div>
-                    <hr />
-                    <div className="project-description">
-                      <p>{project.description}</p>
-                    </div>
-                    {project.logos && (
-                      <div className="project-icons">
-                        {project.logos.map(item => {
-                          if (item == "github" && project.github_link) {
-                            return (
-                              <a href={project.github_link} target="_blank">
-                                {logoreturner(item, project.github_link)}
-                              </a>
-                            );
-                          } else if (item == "www" && project.project_link) {
-                            return (
-                              <a href={project.github_link} target="_blank">
-                                {logoreturner(item, project.project_link)}
-                              </a>
-                            );
-                          } else {
-                            return logoreturner(item);
-                          }
-                        })}
-                      </div>
-                    )}
-                  </div>
-                  {/* <div className="project-about">
+                )}
+              </div>
+              {/* <div className="project-about">
                     <div className="about-heading">
                       <h1>{project.name}</h1>
                     </div>
@@ -218,9 +242,7 @@ export class HomePage extends Component {
                       <a href={project.project_link}>{logos.www_logo()}</a>
                     </div>
                   )} */}
-                </div>
-              );
-            })}
+            </div>
           </Zoom>
         </WorksContainer>
         {/* <HomeContainer>
@@ -274,5 +296,4 @@ export class HomePage extends Component {
     );
   }
 }
-
 export default HomePage;
