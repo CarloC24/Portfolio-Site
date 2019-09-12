@@ -11,8 +11,8 @@ import { Rotate, Fade, Slide } from "react-reveal";
 const Appbar = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
   /* justify-items: center; */
   .navbar-heading {

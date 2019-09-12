@@ -205,10 +205,10 @@ export class HomePage extends Component {
     console.log(count);
     return (
       <>
-        <WorksContainer id="projects">
-          <Zoom top cascade>
-            <Works></Works>
-            {/* <div className="carousel-dots">
+        {/* <WorksContainer id="projects">
+          <Zoom top cascade> */}
+        <Works></Works>
+        {/* <div className="carousel-dots">
               {projects.map((i, index) => {
                 return <p onClick={e => this.setState({ count: index })}>•</p>;
               })}
@@ -220,7 +220,7 @@ export class HomePage extends Component {
                 <p>projects[count].description</p>
               </div>
             </div> */}
-            {/* <div className="project-container" key={projects[count].name}>
+        {/* <div className="project-container" key={projects[count].name}>
               <div className="project-image">
                 <img
                   className="project-picture"
@@ -263,8 +263,8 @@ export class HomePage extends Component {
                     })}
                   </div>
                 )} */}
-            {/* </div> */}
-            {/* <div className="project-about">
+        {/* </div> */}
+        {/* <div className="project-about">
                 <div className="about-heading">
                   <h1>{project.name}</h1>
                 </div>
@@ -280,9 +280,9 @@ export class HomePage extends Component {
                   <a href={project.project_link}>{logos.www_logo()}</a>
                 </div>
               )} */}
-            {/* </div> */} */}
-          </Zoom>
-          {/* <div className="asd">
+        {/* </div> */} */}
+        {/* </Zoom> */}
+        {/* <div className="asd">
             <img
               src="../static/border.png"
               width="1000"
@@ -290,7 +290,7 @@ export class HomePage extends Component {
               alt="border"
             />
           </div> */}
-        </WorksContainer>
+        {/* </WorksContainer> */}
         {/* <HomeContainer>
           <img
             src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/58442718_2680115618671522_8475970164536377344_o.jpg?_nc_cat=108&_nc_ht=scontent-dfw5-1.xx&oh=d476e025788f681b65147f7cc0ff62e2&oe=5D946722"
