@@ -10,7 +10,7 @@ import { Rotate, Fade, Slide } from "react-reveal";
 
 const Appbar = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   position: sticky;
   top: 0;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
@@ -32,7 +32,9 @@ const Appbar = styled.div`
   .contact-info {
     margin: 20px 0px 0px 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-gap: 20px; */
+    justify-content: center;
+    grid-template-columns: repeat(3, 100px);
     justify-items: center;
     .contact-logo {
       display: grid;

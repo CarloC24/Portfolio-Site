@@ -4,6 +4,7 @@ import * as logos from "../assets/logos";
 import projects from "../assets/projects.json";
 import { Fade, Zoom } from "react-reveal";
 import logoreturner from "../assets/logosswitch";
+import Works from "./Works";
 
 const HomeContainer = styled.div`
   background: ${props => props.theme.babypowder};
@@ -106,8 +107,8 @@ const WorksContainer = styled.div`
       display: grid;
       justify-items: center;
       align-items: center;
-      border:1px solid black;
-      border-radius:2px;
+      border: 1px solid black;
+      border-radius: 2px;
       /* height: 100%; */
       img {
         width: 100%;
@@ -206,7 +207,8 @@ export class HomePage extends Component {
       <>
         <WorksContainer id="projects">
           <Zoom top cascade>
-            <div className="carousel-dots">
+            <Works></Works>
+            {/* <div className="carousel-dots">
               {projects.map((i, index) => {
                 return <p onClick={e => this.setState({ count: index })}>•</p>;
               })}
@@ -218,7 +220,7 @@ export class HomePage extends Component {
                 <p>projects[count].description</p>
               </div>
             </div> */}
-            <div className="project-container" key={projects[count].name}>
+            {/* <div className="project-container" key={projects[count].name}>
               <div className="project-image">
                 <img
                   className="project-picture"
@@ -260,9 +262,9 @@ export class HomePage extends Component {
                       }
                     })}
                   </div>
-                )}
-              </div>
-              {/* <div className="project-about">
+                )} */}
+            {/* </div> */}
+            {/* <div className="project-about">
                 <div className="about-heading">
                   <h1>{project.name}</h1>
                 </div>
@@ -278,7 +280,7 @@ export class HomePage extends Component {
                   <a href={project.project_link}>{logos.www_logo()}</a>
                 </div>
               )} */}
-            </div>
+            {/* </div> */} */}
           </Zoom>
           {/* <div className="asd">
             <img
