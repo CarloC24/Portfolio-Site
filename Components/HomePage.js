@@ -72,6 +72,15 @@ const StacksContainer = styled.div`
 `;
 const WorksContainer = styled.div`
   /* background: #353b3f; */
+  .overlay {
+    width: 90%;
+    height: 300px;
+    .overlaypic {
+      opacity: 0.3;
+      width: 90%;
+      height: 300px;
+    }
+  }
   font-family: "Roboto";
   height: 100px;
   margin-top: 30px;
@@ -97,9 +106,15 @@ const WorksContainer = styled.div`
       display: grid;
       justify-items: center;
       align-items: center;
+      border:1px solid black;
+      border-radius:2px;
       /* height: 100%; */
       img {
-        width: 90%;
+        width: 100%;
+        /* height:500px; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         /* height: 100%; */
         /* height: 350px; */
       }
@@ -109,43 +124,54 @@ const WorksContainer = styled.div`
         /* transform: translateY(-5px); */
       }
     }
-    .project-details {
-      display: grid;
-      width: 90%;
-      justify-items: center;
-      align-items: center;
-      .project-description {
-        /* margin: 10px; */
-        text-align: center;
-        word-break: break-word;
-        line-height: 1.3;
+
+    @media (max-width: 800px) {
+      .project-details {
+        display: grid;
+        width: 90%;
+        justify-items: center;
+        align-items: center;
+        .project-description {
+          /* margin: 10px; */
+          text-align: center;
+          word-break: break-word;
+          line-height: 1.3;
+        }
       }
     }
+    .project-icons svg,
+    .project-icons img {
+      height: 50px;
+      width: 50px;
+      margin: 8px;
+      transition: 0.2s all;
+    }
+    .project-icons svg:hover,
+    .project-icons img:hover {
+      transform: translateY(-5px);
+    }
+    .stack-icons svg,
+    .stack-icons img {
+      height: 50px;
+      width: 50px;
+      margin: 8px;
+      transition: 0.2s all;
+    }
+    .stack-icons svg:hover,
+    .stack-icons img:hover {
+      transform: translateY(-5px);
+    }
+    hr {
+      width: 90%;
+    }
   }
-  .project-icons svg,
-  .project-icons img {
-    height: 50px;
-    width: 50px;
-    margin: 8px;
-    transition: 0.2s all;
-  }
-  .project-icons svg:hover,
-  .project-icons img:hover {
-    transform: translateY(-5px);
-  }
-  .stack-icons svg,
-  .stack-icons img {
-    height: 50px;
-    width: 50px;
-    margin: 8px;
-    transition: 0.2s all;
-  }
-  .stack-icons svg:hover,
-  .stack-icons img:hover {
-    transform: translateY(-5px);
-  }
-  hr {
-    width: 90%;
+  .asd {
+    width: 500px;
+    /* background: black; */
+    height: 500px;
+    img {
+      background: black;
+    }
   }
 `;
 
@@ -180,8 +206,18 @@ export class HomePage extends Component {
       <>
         <WorksContainer id="projects">
           <Zoom top cascade>
-            {/* <button onClick={this.nextPage}>Next</button>
-            <button onClick={this.prevPage}>Prev</button> */}
+            <div className="carousel-dots">
+              {projects.map((i, index) => {
+                return <p onClick={e => this.setState({ count: index })}>•</p>;
+              })}
+            </div>
+            {/* <div className="overlay">
+              <img className="overlaypic" src={projects[count].gif_link}></img>
+              <div className="nameproject">
+                <h1>Bonafind</h1>
+                <p>projects[count].description</p>
+              </div>
+            </div> */}
             <div className="project-container" key={projects[count].name}>
               <div className="project-image">
                 <img
@@ -227,23 +263,31 @@ export class HomePage extends Component {
                 )}
               </div>
               {/* <div className="project-about">
-                    <div className="about-heading">
-                      <h1>{project.name}</h1>
-                    </div>
-                    <p>{project.description}</p>
-                  </div>
-                  {project.github_link ? (
-                    <div className="project-icons">
-                      <a href={project.github_link}>{logos.github_logo()}</a>
-                      <a href={project.project_link}>{logos.www_logo()}</a>
-                    </div>
-                  ) : (
-                    <div className="project-icons--single">
-                      <a href={project.project_link}>{logos.www_logo()}</a>
-                    </div>
-                  )} */}
+                <div className="about-heading">
+                  <h1>{project.name}</h1>
+                </div>
+                <p>{project.description}</p>
+              </div>
+              {project.github_link ? (
+                <div className="project-icons">
+                  <a href={project.github_link}>{logos.github_logo()}</a>
+                  <a href={project.project_link}>{logos.www_logo()}</a>
+                </div>
+              ) : (
+                <div className="project-icons--single">
+                  <a href={project.project_link}>{logos.www_logo()}</a>
+                </div>
+              )} */}
             </div>
           </Zoom>
+          {/* <div className="asd">
+            <img
+              src="../static/border.png"
+              width="1000"
+              style={{ color: "black" }}
+              alt="border"
+            />
+          </div> */}
         </WorksContainer>
         {/* <HomeContainer>
           <img
