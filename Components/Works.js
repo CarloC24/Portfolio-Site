@@ -30,6 +30,14 @@ const WorksContainer = styled.div`
     .stack-icons {
       margin-left: 15px;
     }
+    .project-description {
+      margin-left: 30px;
+      font-family: "roboto";
+      word-break: break-word;
+    }
+    .project-icons {
+
+    }
   }
   /* END TWO DIVS */
   /* SVG IMGS LOGOS */
@@ -79,8 +87,27 @@ class Works extends React.Component {
           <div className="stack-icons">
             {projects[count].stack_logos.map(item => logoreturner(item))}
           </div>
-          <p>{loremipsum}</p>
-          <p>Put the website logos in here</p>
+          <p className="project-description">{loremipsum}</p>
+          <div className="project-icons">
+            {" "}
+            {projects[count].logos.map(item => {
+              if (item == "github" && projects[count].github_link) {
+                return (
+                  <a href={projects[count].github_link} target="_blank">
+                    {logoreturner(item, projects[count].github_link)}
+                  </a>
+                );
+              } else if (item == "www" && projects[count].project_link) {
+                return (
+                  <a href={projects[count].github_link} target="_blank">
+                    {logoreturner(item, projects[count].project_link)}
+                  </a>
+                );
+              } else {
+                return logoreturner(item);
+              }
+            })}
+          </div>
         </div>
       </WorksContainer>
     );
