@@ -1,6 +1,7 @@
 import App, { Container } from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import Navbar from "../Components/Navbar";
 import Page from "../Components/Page";
 import GlobalStyle from "../assets/globalStyle";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
@@ -45,6 +46,10 @@ class MyApp extends App {
           href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" type="image/x-icon" href="../static/other_logo.png" />
         <title>Carlo Clamucha's portfolio website!</title>
         <meta property="locale" content="en_US" />
@@ -62,13 +67,16 @@ class MyApp extends App {
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-146357995-1"
         ></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'GA_MEASUREMENT_ID');
-`}}></script>
+`
+          }}
+        ></script>
       </Head>
     );
   }
@@ -81,6 +89,7 @@ class MyApp extends App {
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <Page>
+            <Navbar />
             <Component {...pageProps} />
           </Page>
         </ThemeProvider>

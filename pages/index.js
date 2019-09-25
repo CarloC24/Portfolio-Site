@@ -6,8 +6,7 @@ export class HomePage extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Homepage />
+        <p> Homepage</p>
       </div>
     );
   }
