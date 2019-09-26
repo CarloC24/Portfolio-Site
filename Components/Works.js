@@ -7,7 +7,8 @@ import logoreturner, { loremipsum } from "../assets/logosswitch";
 const WorksContainer = styled.div`
   display: grid;
   margin-top: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  background-color: #003152;
+  grid-template-rows: repeat(2, 1fr);
   line-height: 25px;
   /* TWO DIVS */
   .project-picture {
@@ -21,7 +22,7 @@ const WorksContainer = styled.div`
   }
   .project-details {
     height: 100%;
-    background: #989898;
+    background-color: #003152;
     .project-name {
       margin: 60px 30px 10px;
       font-family: "roboto";
@@ -36,7 +37,6 @@ const WorksContainer = styled.div`
       word-break: break-word;
     }
     .project-icons {
-
     }
   }
   /* END TWO DIVS */

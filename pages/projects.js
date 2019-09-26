@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Projects from "../Components/Projects";
 
 export default class projects extends Component {
   render() {
     return (
       <div>
-        <p>Projects Component</p>
+        <Projects></Projects>
       </div>
     );
   }

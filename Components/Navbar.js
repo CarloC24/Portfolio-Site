@@ -21,14 +21,14 @@ const Appbar = styled.div`
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     a {
-      color: black;
+      color: white;
       margin: 10px;
       font-size: 1.4rem;
-      transition: 0.3s all;
       text-decoration: none;
     }
     a:hover {
-      border-bottom: 1px solid black;
+      background-color: cornflowerblue;
+      opacity: 0.6;
     }
     /* justify-content: center; */
   }
@@ -67,21 +67,21 @@ export class Navbar extends Component {
   render() {
     return (
       <>
-        <HeroImage>
+        {/* <HeroImage>
           <img src="https://img.freepik.com/free-photo/ragged-crumpled-dark-black-paper-texture-background_8087-1872.jpg?size=626&ext=jpg" />
           <h1>Carlo Clamucha</h1>
           <h1>Software Engineer</h1>
-        </HeroImage>
+        </HeroImage> */}
         <Appbar>
           <div className="pages">
             <Link href="/">
               <a>Introduction</a>
             </Link>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
             <Link href="/projects">
               <a>Projects</a>
+            </Link>
+            <Link href="/contact">
+              <a>Contact</a>
             </Link>
           </div>
         </Appbar>

@@ -37,22 +37,22 @@ export default function Contact() {
       <div className="fill"></div>
       <div className="contact-logo">
         {logosSwitch("email")}
-        <p>Email Logo</p>
+        <p>carlo.clamucha@gmail.com</p>
       </div>
       <div className="contact-logo">
         {logosSwitch(
           "linkedIn",
           "https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
         )}
-        <p>LinkedIn Logo</p>
+        <p>My LinkedIn</p>
       </div>
       <div className="contact-logo">
         {logosSwitch("github", "https://github.com/CarloC24")}
-        <p>Github Logo</p>
+        <p>My Github @CarloC24</p>
       </div>
       <div className="contact-logo">
         {logosSwitch("resume", "https://resume.creddle.io/resume/fwoe7ya3wlk")}
-        <p>Resume Logo</p>
+        <p>My Resume</p>
       </div>
     </Contactcontainer>
   );

@@ -40,16 +40,20 @@ const IntroContainer = styled.div`
       text-align: center;
       line-height: 1.6;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
       width: 80%;
     }
   }
   .about-logos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
     img {
       width: 50px;
+    }
+    img:hover {
+      background-color: cornflowerblue;
+      opacity: 0.6;
     }
   }
 `;
