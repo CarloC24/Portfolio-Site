@@ -40,6 +40,8 @@ export default function(logo, link = "") {
       return logos.linkedIn_logo(link);
     case "resume":
       return logos.resume_logo(link);
+    case "email":
+      return logos.email_logo();
     default:
       return <p>[{logo}]</p>;
   }

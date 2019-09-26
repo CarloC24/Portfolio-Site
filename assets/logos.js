@@ -413,7 +413,11 @@ export const www_logo = (link = "") => {
 };
 
 export const email_logo = () => {
-  return <img src="https://image.flaticon.com/icons/png/512/732/732200.png" />;
+  return (
+    <a href="mailto:carlo.clamucha@gmail.com">
+      <img src="https://image.flaticon.com/icons/png/512/732/732200.png" />
+    </a>
+  );
 };
 
 export const resume_logo = (link = "") => {
