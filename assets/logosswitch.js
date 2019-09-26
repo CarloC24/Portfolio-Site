@@ -36,6 +36,10 @@ export default function(logo, link = "") {
       return logos.apollo_logo();
     case "graphql":
       return logos.graphql_logo();
+    case "linkedIn":
+      return logos.linkedIn_logo(link);
+    case "resume":
+      return logos.resume_logo(link);
     default:
       return <p>[{logo}]</p>;
   }
