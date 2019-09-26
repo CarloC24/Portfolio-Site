@@ -11,7 +11,7 @@ import { Rotate, Fade, Slide } from "react-reveal";
 
 const Appbar = styled.div`
   /* TRBL */
-  margin-top: 10px;
+  background-color: #1f305e;
   /* border: 1px solid red; */
   display: grid;
   justify-items: center;
@@ -22,6 +22,8 @@ const Appbar = styled.div`
     justify-items: center;
     a {
       color: black;
+      margin: 10px;
+      font-size: 1.4rem;
       transition: 0.3s all;
       text-decoration: none;
     }
@@ -29,6 +31,30 @@ const Appbar = styled.div`
       border-bottom: 1px solid black;
     }
     /* justify-content: center; */
+  }
+`;
+
+const HeroImage = styled.div`
+  height: 250px;
+  display: grid;
+  grid-template-rows: 20px 50px 0px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 250px;
+  }
+  h1 {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    z-index: 2;
   }
 `;
 
@@ -40,19 +66,26 @@ export class Navbar extends Component {
   };
   render() {
     return (
-      <Appbar>
-        <div className="pages">
-          <Link href="/">
-            <a>Introduction</a>
-          </Link>
-          <Link href="/contact">
-            <a>Contact</a>
-          </Link>
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
-        </div>
-      </Appbar>
+      <>
+        <HeroImage>
+          <img src="https://img.freepik.com/free-photo/ragged-crumpled-dark-black-paper-texture-background_8087-1872.jpg?size=626&ext=jpg" />
+          <h1>Carlo Clamucha</h1>
+          <h1>Software Engineer</h1>
+        </HeroImage>
+        <Appbar>
+          <div className="pages">
+            <Link href="/">
+              <a>Introduction</a>
+            </Link>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
+          </div>
+        </Appbar>
+      </>
     );
   }
 }

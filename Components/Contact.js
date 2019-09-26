@@ -28,9 +28,6 @@ const Contactcontainer = styled.div`
       font-size: 1.6rem;
       transition: 0.8s;
     }
-    p:hover {
-      text-decoration: #42b883 double underline;
-    }
   }
 `;
 
