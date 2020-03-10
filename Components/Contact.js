@@ -44,15 +44,15 @@ export default function Contact() {
           "linkedIn",
           "https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
         )}
-        <p>My LinkedIn</p>
+        <p>Connect with me in LinkedIn</p>
       </div>
       <div className="contact-logo">
         {logosSwitch("github", "https://github.com/CarloC24")}
-        <p>My Github @CarloC24</p>
+        <p>View my Github</p>
       </div>
       <div className="contact-logo">
         {logosSwitch("resume", "https://resume.creddle.io/resume/fwoe7ya3wlk")}
-        <p>My Resume</p>
+        <p>View my resume</p>
       </div>
     </Contactcontainer>
   );
