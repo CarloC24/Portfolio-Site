@@ -77,6 +77,9 @@ export class Navbar extends Component {
             <Link href="/">
               <a>Introduction</a>
             </Link>
+            <Link href="/profile">
+              <a>Profile</a>
+            </Link>
             <Link href="/projects">
               <a>Projects</a>
             </Link>
