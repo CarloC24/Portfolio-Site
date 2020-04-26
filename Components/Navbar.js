@@ -11,50 +11,37 @@ import { Rotate, Fade, Slide } from "react-reveal";
 
 const Appbar = styled.div`
   /* TRBL */
-  background-color: #1f305e;
-  /* border: 1px solid red; */
-  display: grid;
-  justify-items: center;
-  .pages {
-    display: grid;
-    font-family: "Open Sans", sans-serif;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    a {
-      color: white;
-      margin: 10px;
-      font-size: 1.4rem;
-      text-decoration: none;
-    }
-    a:hover {
-      background-color: cornflowerblue;
-      opacity: 0.6;
-    }
-    /* justify-content: center; */
+  .hero-image {
+    max-width:120px;
+    max-height:120px;
+  }  
+  a {
+    color:black;
+    text-decoration:none;
+    font-weight:normal;
+    transition:font-weight 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:bold;
   }
-`;
-
-const HeroImage = styled.div`
-  height: 250px;
-  display: grid;
-  grid-template-rows: 20px 50px 0px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    width: 100%;
-    height: 250px;
+  .dot {
+    height: 13px;
+    width: 13px;
+    background-color: black;
+    border-radius: 50%;
+    display:inline-block;
+    padding-top:1px;
+    transition:all 0.1s ease-in;
+    opacity:0;
   }
-  h1 {
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.8rem;
-    color: white;
-    z-index: 2;
+ 
+  .link {
+    transition:all 1s;
+    margin-bottom:6px;
+     &:hover {
+       span{
+        opacity:1
+       }
+     }
   }
 `;
 
@@ -65,30 +52,26 @@ export class Navbar extends Component {
     resume: false
   };
   render() {
-    return (
-      <>
-        {/* <HeroImage>
-          <img src="https://img.freepik.com/free-photo/ragged-crumpled-dark-black-paper-texture-background_8087-1872.jpg?size=626&ext=jpg" />
-          <h1>Carlo Clamucha</h1>
-          <h1>Software Engineer</h1>
-        </HeroImage> */}
+    return ( 
         <Appbar>
-          <div className="pages">
-            <Link href="/">
-              <a>Introduction</a>
+          <div className="d-flex flex-row">
+          <img className=" w-25 mt-2 mb-4 mx-5 hero-image" src="../static/my_logo.png"></img>
+          <div className=" w-75 my-4 mx-3 d-flex flex-column">
+            <div className="link">
+            <Link href="/" >
+              <a>All Works</a>
             </Link>
-            <Link href="/profile">
-              <a>Profile</a>
+            <span className="ml-2 dot"></span>
+            </div>
+            <div className="link">
+            <Link href="/profile" >
+              <a>About Me</a>
             </Link>
-            <Link href="/projects">
-              <a>Projects</a>
-            </Link>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
+            <span className="ml-2 dot" ></span>
+            </div>
+          </div>
           </div>
         </Appbar>
-      </>
     );
   }
 }
