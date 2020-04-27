@@ -55,7 +55,7 @@ const ProjectCard = styled.div`
 
 export default function Projects() {
   return (
-    <MyProjects>
+    <MyProjects className="mt-5">
       {projects.map(project => (
         <ProjectCard>
           <img src={project.gif_link} />

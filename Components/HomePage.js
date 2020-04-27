@@ -202,7 +202,6 @@ export class HomePage extends Component {
   };
   render() {
     let { count } = this.state;
-    console.log(count);
     return (
       <>
         <Works></Works>
