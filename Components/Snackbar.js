@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Styled from "styled-components";
+import logosswitch from "../assets/logosswitch";
 
 const SnackbarDiv = styled.div`
 
@@ -9,7 +10,10 @@ const SnackbarDiv = styled.div`
     render() {
         return (
             <SnackbarDiv className="d-flex">
-                <p>awda</p>
+                <p>Github</p>
+                <p>Resume</p>
+                <p>LinkedIn</p>
+                <p>Email</p>
             </SnackbarDiv>
         )
     }
