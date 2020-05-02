@@ -115,9 +115,9 @@ class MyApp extends App {
       <Container>
         {this.renderHead()}
         <GlobalStyle />
+        <Navbar />
         <ThemeProvider theme={theme}>
           <Page>
-            <Navbar />
             <Component {...pageProps} />
           </Page>
         </ThemeProvider>
