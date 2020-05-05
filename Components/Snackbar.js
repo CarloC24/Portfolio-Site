@@ -3,7 +3,7 @@ import Styled from "styled-components";
 import logosSwitch from "../assets/logosswitch";
 
 const SnackbarDiv = Styled.div`
-position:absolute;
+
 img {
   width:50px;
 }
@@ -13,7 +13,7 @@ class Snackbar extends Component {
   render() {
     return (
       <>
-        <SnackbarDiv className="d-flex flex-column">
+        <SnackbarDiv className="d-md-flex d-none flex-column">
           {logosSwitch("email")}
           {logosSwitch(
             "linkedIn",

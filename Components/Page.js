@@ -2,16 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import Snackbar from "./Snackbar";
 
-const GlobalImage = styled.div``;
+const PageContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+`;
 
 export default class extends React.Component {
   render() {
     return (
-      <GlobalImage className="d-flex align-items-center">
+      <PageContainer>
         {" "}
         <Snackbar />
         {this.props.children}
-      </GlobalImage>
+      </PageContainer>
     );
   }
 }

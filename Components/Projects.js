@@ -6,7 +6,7 @@ import logosswitch from "../assets/logosswitch";
 const MyProjects = styled.div`
   display: grid;
   grid-gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 `;
@@ -56,11 +56,11 @@ const ProjectCard = styled.div`
 export default function Projects() {
   return (
     <MyProjects className="mt-5">
-      {projects.map(project => (
+      {projects.map((project) => (
         <ProjectCard>
           <img src={project.gif_link} />
           <div className="stacklogos">
-            {project.stack_logos.map(item => logosswitch(item))}
+            {project.stack_logos.map((item) => logosswitch(item))}
           </div>
           <p className="project-description">{project.description}</p>
           <div className="my-logos">
