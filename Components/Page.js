@@ -14,7 +14,6 @@ export default class extends React.Component {
   render() {
     return (
       <PageContainer>
-        {" "}
         <Snackbar />
         {this.props.children}
       </PageContainer>
