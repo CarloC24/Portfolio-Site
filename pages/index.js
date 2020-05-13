@@ -5,6 +5,12 @@ import Projects from "../Components/Projects";
 import HorizontalSnackbar from "../Components/HorizontalSnackbar";
 
 export class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      componentCount: 1,
+    };
+  }
   render() {
     return (
       <div className="w-100">
