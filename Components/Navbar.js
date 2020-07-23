@@ -13,29 +13,12 @@ const Appbar = styled.div`
   a {
     color: black;
     text-decoration: none;
-    font-weight: normal;
     transition: font-weight 0.3s;
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-  }
-  .dot {
-    height: 13px;
-    width: 13px;
-    background-color: black;
-    border-radius: 50%;
-    display: inline-block;
-    padding-top: 1px;
-    transition: all 0.1s ease-in;
-    opacity: 0;
-  }
-
-  .link {
-    transition: all 1s;
-    margin-bottom: 6px;
-    &:hover {
-      span {
-        opacity: 1;
-      }
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    padding: 0 20px;
+    :hover {
+      font-weight: normal;
     }
   }
 
@@ -69,16 +52,20 @@ export class Navbar extends Component {
           </div>
           <div className="my-4 mx-3 d-flex">
             <div className="link">
-              <Link href="/">
-                <a>All Works</a>
-              </Link>
-              <span className="ml-2 dot"></span>
+              <a
+                href="https://resume.creddle.io/resume/fwoe7ya3wlk"
+                target="_blank"
+              >
+                Resume
+              </a>
             </div>
             <div className="link">
-              <Link href="/profile">
-                <a>About Me</a>
-              </Link>
-              <span className="ml-2 dot"></span>
+              <a
+                href="https://www.linkedin.com/in/juan-carlo-clamucha-1489b216b/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
