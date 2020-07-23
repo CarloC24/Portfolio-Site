@@ -12,8 +12,6 @@ const ProjectCard = styled.div`
       margin-top: 10px;
       width: 100%;
       transition: 0.3s;
-      height: 100%;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       :hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -79,7 +77,7 @@ const ProjectCard = styled.div`
     }
 
     @media (max-width: 993px) {
-      grid-template-rows: 1fr 150px 50px 200px;
+      grid-gap: 30px;
       grid-template-columns: none;
     }
   }

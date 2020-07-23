@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { CarouselItem } from "./CarouselItem";
 import projects from "../assets/projects.json";
 import styled from "styled-components";
+import { CustomArrow } from "./CustomArrow";
 
 const CarouselContainer = styled.div`
   .carousel-headline {
@@ -18,10 +19,12 @@ class Carousel extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      nextArrow: <CustomArrow />,
+      prevArrow: <CustomArrow />
     };
     return (
-      <CarouselContainer className="p-4">
+      <CarouselContainer className="py-5 px-2">
         <h1 className="carousel-headline pb-3">
           Here are some of the projects I've worked on by myself or with a
           group.
