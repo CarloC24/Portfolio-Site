@@ -6,6 +6,7 @@ import Page from "../Components/Page";
 import GlobalStyle from "../assets/globalStyle";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Snackbar from "../Components/Snackbar";
+
 const theme = {
   red: "#FF0000",
   black: "#393939",
@@ -109,6 +110,17 @@ class MyApp extends App {
           href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
     );
   }

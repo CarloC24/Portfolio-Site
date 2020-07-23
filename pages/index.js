@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Projects from "../Components/Projects";
 import HorizontalSnackbar from "../Components/HorizontalSnackbar";
 import Profile from "../Components/Profile";
+import { Carousel } from "../Components/Carousel";
+import Contact from "../Components/Contact";
 
 export class HomePage extends Component {
   constructor(props) {
@@ -34,8 +36,9 @@ export class HomePage extends Component {
     return (
       <div className="w-100">
         <Profile />
-        <Projects />
-        <HorizontalSnackbar />
+        <Carousel />
+        {/* <Projects /> */}
+        <Contact />
       </div>
     );
   }
