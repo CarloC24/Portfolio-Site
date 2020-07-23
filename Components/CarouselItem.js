@@ -98,7 +98,7 @@ class CarouselItem extends Component {
             {project.stack_logos.map(item => logosswitch(item))}
           </div>
           <div className="vertical-line d-none d-lg-block"></div>
-          <hr className="d-block d-lg-none w-100 border-top border-dark" />
+          {/* <hr className="d-block d-lg-none w-100 border-top border-dark" /> */}
           <div className="description-container">
             <h1 className="text-center font-weight-bold">{project.name}</h1>
             <p className="project-description font-weight-lighter">
