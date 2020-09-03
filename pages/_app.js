@@ -6,6 +6,7 @@ import Page from "../Components/Page";
 import GlobalStyle from "../assets/globalStyle";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Snackbar from "../Components/Snackbar";
+
 const theme = {
   red: "#FF0000",
   black: "#393939",
@@ -15,7 +16,7 @@ const theme = {
   offWhite: "#FFFFF0",
   maxWidth: "1000px",
   bs: "0 12px 24px 0 rgba(0,0,0,0.09)",
-  babypowder: "#FDFFFC",
+  babypowder: "#FDFFFC"
 };
 
 class MyApp extends App {
@@ -29,7 +30,7 @@ class MyApp extends App {
     return { pageProps };
   }
   state = {
-    dropdown: false,
+    dropdown: false
   };
   handleOpenCloseDropdown = () => {
     this.setState({ dropdown: !this.state.dropdown });
@@ -49,6 +50,10 @@ class MyApp extends App {
         />
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" type="image/x-icon" href="../static/other_logo.png" />
@@ -75,7 +80,7 @@ class MyApp extends App {
   gtag('js', new Date());
 
   gtag('config', 'GA_MEASUREMENT_ID');
-`,
+`
           }}
         ></script>
         <link
@@ -105,6 +110,17 @@ class MyApp extends App {
           href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
     );
   }

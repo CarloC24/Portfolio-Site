@@ -18,6 +18,10 @@ const ProjectCard = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   img {
     width: 400px;
+    :hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
   }
   .stacklogos {
     margin-left: 20px;
@@ -38,10 +42,7 @@ const ProjectCard = styled.div`
     text-align: center;
     font-family: "Noto Serif", serif;
   }
-  :hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
+
   .my-logos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,11 +57,11 @@ const ProjectCard = styled.div`
 export default function Projects() {
   return (
     <MyProjects className="mt-5">
-      {projects.map((project) => (
+      {projects.map(project => (
         <ProjectCard>
           <img src={project.gif_link} />
           <div className="stacklogos">
-            {project.stack_logos.map((item) => logosswitch(item))}
+            {project.stack_logos.map(item => logosswitch(item))}
           </div>
           <p className="project-description">{project.description}</p>
           <div className="my-logos">

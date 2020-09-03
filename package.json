@@ -27,7 +27,9 @@
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-responsive-carousel": "^3.2.9",
     "react-reveal": "^1.2.2",
+    "react-slick": "^0.27.0",
     "styled-components": "^4.1.3"
   }
 }
