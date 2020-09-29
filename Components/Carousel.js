@@ -17,7 +17,7 @@ class Carousel extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 2000,
       swipeToSlide: true,
       autoplay: true,
       autoplaySpeed: 4500,
@@ -25,7 +25,7 @@ class Carousel extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: <CustomArrow />,
-      prevArrow: <CustomArrow />
+      prevArrow: <CustomArrow />,
     };
     return (
       <CarouselContainer className="py-5 px-2">
@@ -34,7 +34,7 @@ class Carousel extends Component {
           group.
         </h1>
         <Slider {...settings}>
-          {projects.map(project => (
+          {projects.map((project) => (
             <CarouselItem project={project} />
           ))}
         </Slider>
