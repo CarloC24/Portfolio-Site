@@ -1,4 +1,4 @@
-import App, { Container } from "next/app";
+import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 import Navbar from "../Components/Navbar";
@@ -128,7 +128,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <>
         {this.renderHead()}
         <GlobalStyle />
         <Navbar />
@@ -137,7 +137,7 @@ class MyApp extends App {
             <Component {...pageProps} />
           </Page>
         </ThemeProvider>
-      </Container>
+      </>
     );
   }
 }
