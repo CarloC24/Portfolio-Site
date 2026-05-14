@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import * as logos from "../assets/logos";
 import projects from "../assets/projects.json";
-import { Fade, Zoom } from "react-reveal";
 import logoreturner from "../assets/logosswitch";
 import Works from "./Works";
 
