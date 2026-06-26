@@ -32,7 +32,15 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.6;
+	min-height: 100vh;
+	font-family: ${props => props.theme.fontBody};
+	color: ${props => props.theme.foreground};
+	background: ${props => props.theme.pageGradient};
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 ol, ul {
 	list-style: none;
@@ -67,8 +75,6 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
-/
 
 hr {
   box-sizing: content-box; /* 1 */
@@ -225,6 +231,41 @@ template {
 }
 html {
   scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+/* CRITICAL: visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid ${props => props.theme.ring};
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }`;
 
 export default GlobalStyle;

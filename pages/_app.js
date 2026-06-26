@@ -8,6 +8,7 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Snackbar from "../Components/Snackbar";
 
 const theme = {
+  // --- legacy tokens (kept for backwards-compat with non-live components) ---
   red: "#FF0000",
   black: "#393939",
   coolblack: "#555F61",
@@ -16,7 +17,47 @@ const theme = {
   offWhite: "#FFFFF0",
   maxWidth: "1000px",
   bs: "0 12px 24px 0 rgba(0,0,0,0.09)",
-  babypowder: "#FDFFFC"
+  babypowder: "#FDFFFC",
+
+  // --- glass / modern design system (UI-UX Pro Max: Glassmorphism) ---
+  // semantic colors
+  primary: "#18181B",
+  onPrimary: "#FFFFFF",
+  secondary: "#3F3F46", // body / secondary text (>=7:1 on light glass)
+  accent: "#2563EB", // fills / active state
+  accentText: "#1D4ED8", // accent used as text (>=4.5:1 on light glass)
+  background: "#FAFAFA",
+  foreground: "#09090B", // headings / primary text
+  border: "#E4E4E7",
+  ring: "#2563EB",
+
+  // glass surfaces
+  glassBg: "rgba(255, 255, 255, 0.55)",
+  glassBgStrong: "rgba(255, 255, 255, 0.72)",
+  glassBorder: "rgba(255, 255, 255, 0.6)",
+  blur: "blur(16px)",
+  blurNav: "blur(12px)",
+
+  // backdrop gradient so the glass has something to refract
+  pageGradient:
+    "radial-gradient(at 18% 18%, #dbeafe 0px, transparent 55%), " +
+    "radial-gradient(at 82% 12%, #ede9fe 0px, transparent 50%), " +
+    "radial-gradient(at 78% 88%, #d1fae5 0px, transparent 50%), " +
+    "radial-gradient(at 10% 86%, #fae8ff 0px, transparent 45%), #f6f7fb",
+
+  // elevation scale (consistent across nav / cards / chips)
+  shadowSm: "0 1px 2px rgba(16, 24, 40, 0.06)",
+  shadowMd: "0 8px 24px rgba(16, 24, 40, 0.10)",
+  shadowLg: "0 20px 48px rgba(16, 24, 40, 0.14)",
+
+  // radii
+  radiusSm: "10px",
+  radiusMd: "16px",
+  radiusLg: "24px",
+
+  // typography
+  fontHeading: "'Archivo', sans-serif",
+  fontBody: "'Space Grotesk', sans-serif"
 };
 
 class MyApp extends App {
@@ -40,20 +81,14 @@ class MyApp extends App {
     return (
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Yellowtail&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" type="image/x-icon" href="../static/other_logo.png" />
@@ -79,7 +114,7 @@ class MyApp extends App {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'GA_MEASUREMENT_ID');
+  gtag('config', 'UA-146357995-1');
 `
           }}
         ></script>
@@ -88,27 +123,6 @@ class MyApp extends App {
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous"
-        ></link>
-        <script
-          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"
-        ></script>
-
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-          crossorigin="anonymous"
-        ></script>
-
-        <script
-          src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-          crossorigin="anonymous"
-        ></script>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-          rel="stylesheet"
         ></link>
         <link
           rel="stylesheet"
@@ -128,16 +142,14 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <>
+      <ThemeProvider theme={theme}>
         {this.renderHead()}
         <GlobalStyle />
         <Navbar />
-        <ThemeProvider theme={theme}>
-          <Page>
-            <Component {...pageProps} />
-          </Page>
-        </ThemeProvider>
-      </>
+        <Page>
+          <Component {...pageProps} />
+        </Page>
+      </ThemeProvider>
     );
   }
 }
