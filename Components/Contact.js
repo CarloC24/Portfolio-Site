@@ -65,9 +65,10 @@ const Contactcontainer = styled.section`
     min-height: 44px;
     border-radius: ${props => props.theme.radiusSm};
   }
-  .contact-logo img {
-    width: 44px;
-    height: 44px;
+  .contact-logo img,
+  .contact-logo svg {
+    width: 40px;
+    height: 40px;
   }
   .contact-logo p {
     margin: 0;

@@ -101,8 +101,10 @@ const ProjectCard = styled.div`
         a:hover {
           transform: translateY(-3px);
         }
-        img {
+        img,
+        svg {
           width: 64px;
+          height: 64px;
         }
       }
     }
