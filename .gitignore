@@ -2,3 +2,7 @@ node_modules
 .next
 aws.md
 .gstack/
+
+# graphify build state (machine-specific paths / regenerable cache)
+graphify-out/.graphify_*
+graphify-out/cache/
