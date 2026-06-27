@@ -91,18 +91,67 @@ class MyApp extends App {
           href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Yellowtail&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" type="image/x-icon" href="../static/other_logo.png" />
-        <title>Carlo Clamucha's portfolio website!</title>
+        <link rel="icon" type="image/x-icon" href="/static/other_logo.png" />
+        <title>Carlo Clamucha — Full-Stack Developer</title>
+        <meta
+          key="description"
+          name="description"
+          content="Carlo Clamucha — full-stack developer. Portfolio of projects built with React, Next.js, and Node."
+        />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta
-          property="og:description"
-          content="My own portfolio website built in NextJS and React"
+          key="og:title"
+          property="og:title"
+          content="Carlo Clamucha — Full-Stack Developer"
         />
-        <meta property="og:url" content="https://carlo-clamucha.me" />
+        <meta
+          key="og:description"
+          property="og:description"
+          content="Portfolio of projects built with React, Next.js, and Node."
+        />
+        <meta
+          key="og:url"
+          property="og:url"
+          content="https://carlo-clamucha.me"
+        />
         <meta
           property="og:site_name"
           content="Carlo Clamucha's portfolio website"
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content="https://carlo-clamucha.me/static/headerbackground.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content="Carlo Clamucha — Full-Stack Developer"
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content="Portfolio of projects built with React, Next.js, and Node."
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content="https://carlo-clamucha.me/static/headerbackground.jpg"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Carlo Clamucha",
+              url: "https://carlo-clamucha.me",
+              jobTitle: "Full-Stack Developer",
+              sameAs: ["https://github.com/CarloC24"]
+            })
+          }}
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-27RPV2MSF2"></script>
         <script
