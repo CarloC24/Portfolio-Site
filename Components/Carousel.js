@@ -9,6 +9,7 @@ const CarouselContainer = styled.section`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem 1rem 3.5rem;
+  scroll-margin-top: 90px;
 
   .carousel-headline {
     font-family: ${props => props.theme.fontHeading};
@@ -59,7 +60,7 @@ class Carousel extends Component {
       prevArrow: <CustomArrow />
     };
     return (
-      <CarouselContainer>
+      <CarouselContainer id="projects">
         <h2 className="carousel-headline">
           Here are some of the projects I've worked on by myself or with a
           group.
