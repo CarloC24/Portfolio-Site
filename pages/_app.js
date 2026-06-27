@@ -105,13 +105,16 @@ class MyApp extends App {
           content="Carlo Clamucha's portfolio website"
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-27RPV2MSF2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-          gtag('config', 'G-27RPV2MSF2');
-        </script>
+  gtag('config', 'G-27RPV2MSF2');
+`
+          }}
+        ></script>
         <link
           rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
