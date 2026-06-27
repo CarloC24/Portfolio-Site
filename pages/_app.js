@@ -93,31 +93,25 @@ class MyApp extends App {
         />
         <link rel="icon" type="image/x-icon" href="../static/other_logo.png" />
         <title>Carlo Clamucha's portfolio website!</title>
-        <meta property="locale" content="en_US" />
-        <meta property="type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
         <meta
-          property="description"
+          property="og:description"
           content="My own portfolio website built in NextJS and React"
         />
-        <meta property="url" content="https://carlo-clamucha.me" />
+        <meta property="og:url" content="https://carlo-clamucha.me" />
         <meta
-          property="site_name"
+          property="og:site_name"
           content="Carlo Clamucha's portfolio website"
         />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-146357995-1"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-27RPV2MSF2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
 
-  gtag('config', 'UA-146357995-1');
-`
-          }}
-        ></script>
+          gtag('config', 'G-27RPV2MSF2');
+        </script>
         <link
           rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

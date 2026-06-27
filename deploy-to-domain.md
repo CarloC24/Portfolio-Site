@@ -69,7 +69,7 @@ Steps:
       for `carlo-clamucha.me` → copy the **`G-XXXXXXXXXX`** measurement ID.
 - [ ] In `pages/_app.js`, replace the ID in **two places**:
   - line ~109: `src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"`
-  - line ~117: `gtag('config', 'G-XXXXXXXXXX');`
+  - line ~117: `gtag('config', 'G-  ');`
 
 ---
 
