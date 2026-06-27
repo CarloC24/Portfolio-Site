@@ -101,7 +101,7 @@ export default function Contact() {
         <div className="contact-logo">
           {logosSwitch(
             "resume",
-            "https://resume.creddle.io/resume/fwoe7ya3wlk"
+            "/Juan_Carlo_Clamucha_Resume.pdf"
           )}
           <p>View my resume</p>
         </div>

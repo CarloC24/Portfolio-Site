@@ -20,18 +20,18 @@
   {
     "name": "Sickfits",
     "description": "A feature-rich online shopping store where you can sell buy & sell items. Has a very simple receipt/permissions section. React with Server side rendering and  Apollo for the frontend. NodeJS, Graphql-yoga and Prisma on the backend. ",
-    "project_link": "https://sickfits-next-prod-carlo.herokuapp.com/",
+    "github_link": "https://github.com/CarloC24/Advanced-React-Carlo",
     "gif_link": "/SickFits.gif",
     "stack_logos": ["react", "nextjs", "apollo", "node", "prisma", "graphql"],
-    "logos": ["www"]
+    "logos": ["github"]
   },
   {
     "name": "Now thats delicious",
     "description": "A feature-rich NodeJS application that lets you post a store and get reviews on it!. It can display all the reviewed stores in a static map and show where the store is located in the world! Made in PugJS templating language for the View. MongoDB and Express is used on the backend",
-    "project_link": "https://now-thats-delicious-carlo.herokuapp.com/",
+    "github_link": "https://github.com/CarloC24/Learn-Node",
     "gif_link": "/NWD.gif",
     "stack_logos": ["node", "pug", "passportjs", "mongo"],
-    "logos": ["www"]
+    "logos": ["github"]
   },
   {
     "name": "Foodie Fun",

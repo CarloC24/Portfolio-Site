@@ -22,7 +22,7 @@ class Snackbar extends Component {
           {logosSwitch("github", "https://github.com/CarloC24")}
           {logosSwitch(
             "resume",
-            "https://resume.creddle.io/resume/fwoe7ya3wlk"
+            "/Juan_Carlo_Clamucha_Resume.pdf"
           )}
         </SnackbarDiv>
       </>

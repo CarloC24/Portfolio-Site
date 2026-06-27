@@ -66,7 +66,7 @@ export default function Projects() {
           <p className="project-description">{project.description}</p>
           <div className="my-logos">
             {project.github_link && logosswitch("github", project.github_link)}
-            {logosswitch("www", project.project_link)}
+            {project.project_link && logosswitch("www", project.project_link)}
           </div>
         </ProjectCard>
       ))}
