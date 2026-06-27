@@ -141,7 +141,8 @@ class CarouselItem extends Component {
             <div className="description-logos">
               {project.github_link &&
                 logosswitch("github", project.github_link)}
-              {logosswitch("www", project.project_link)}
+              {project.project_link &&
+                logosswitch("www", project.project_link)}
             </div>
           </div>
         </div>
