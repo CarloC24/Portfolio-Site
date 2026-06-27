@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Head from "next/head";
 import Projects from "../Components/Projects";
 import HorizontalSnackbar from "../Components/HorizontalSnackbar";
 import Profile from "../Components/Profile";
@@ -35,6 +36,25 @@ export class HomePage extends Component {
   render() {
     return (
       <div className="w-100">
+        <Head>
+          <title>Carlo Clamucha — Full-Stack Developer</title>
+          <meta
+            key="description"
+            name="description"
+            content="Full-stack developer building web apps with React, Next.js, and Node. Explore my projects and get in touch."
+          />
+          <meta
+            key="og:description"
+            property="og:description"
+            content="Full-stack developer building web apps with React, Next.js, and Node."
+          />
+          <meta
+            key="og:url"
+            property="og:url"
+            content="https://carlo-clamucha.me/"
+          />
+          <link rel="canonical" href="https://carlo-clamucha.me/" />
+        </Head>
         <Profile />
         <Carousel />
         {/* <Projects /> */}
