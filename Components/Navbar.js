@@ -58,7 +58,7 @@ export class Navbar extends Component {
           <p className="logo-name d-md-none d-block">CC</p>
           <nav className="nav-links" aria-label="Primary">
             <a
-              href="https://resume.creddle.io/resume/fwoe7ya3wlk"
+              href="/Juan_Carlo_Clamucha_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

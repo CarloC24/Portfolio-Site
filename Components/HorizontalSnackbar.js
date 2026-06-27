@@ -51,7 +51,7 @@ export default class HorizontalSnackbar extends Component {
           <div className="logo">
             {logosSwitch(
               "resume",
-              "https://resume.creddle.io/resume/fwoe7ya3wlk"
+              "/Juan_Carlo_Clamucha_Resume.pdf"
             )}
             <p>Resume</p>
           </div>
