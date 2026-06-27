@@ -91,7 +91,7 @@ class MyApp extends App {
           href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Yellowtail&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" type="image/x-icon" href="/static/other_logo.png" />
+        <link rel="icon" type="image/x-icon" href="/other_logo.png" />
         <title>Carlo Clamucha — Full-Stack Developer</title>
         <meta
           key="description"
@@ -122,7 +122,7 @@ class MyApp extends App {
         <meta
           key="og:image"
           property="og:image"
-          content="https://carlo-clamucha.me/static/headerbackground.jpg"
+          content="https://carlo-clamucha.me/headerbackground.jpg"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -138,7 +138,7 @@ class MyApp extends App {
         <meta
           key="twitter:image"
           name="twitter:image"
-          content="https://carlo-clamucha.me/static/headerbackground.jpg"
+          content="https://carlo-clamucha.me/headerbackground.jpg"
         />
         <script
           type="application/ld+json"

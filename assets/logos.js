@@ -500,7 +500,7 @@ export const resume_logo = (link = "") => {
 // add PUGJS, REPLACE REACT LOGO
 
 export const pugjs_logo = () => {
-  return <img src="../static/pugjs.png" />;
+  return <img src="/pugjs.png" />;
 };
 
 export const passportjs_logo = () => {
