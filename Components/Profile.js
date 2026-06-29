@@ -83,9 +83,6 @@ export default class Profile extends Component {
             ends backed by Node, ASP.NET, or Java Spring Boot. Comfortable
             across the stack, I focus on clean code and dependable delivery.
           </p>
-          <a className="cta" href="#projects">
-            View my work
-          </a>
         </div>
       </ProfileContainer>
     );
