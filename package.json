@@ -22,7 +22,7 @@
   "homepage": "https://github.com/CarloC24/Portfolio-Site#readme",
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
-    "next": "^16.2.6",
+    "next": "^16.2.11",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-responsive-carousel": "^3.2.23",
